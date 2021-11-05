@@ -1,6 +1,9 @@
 @import url("common-styles.css");
 @import url("header-styles.css");
 @import url("hero-styles.css");
+@import url("gallery-styles.css");
+@import url("catalogue-styles.css");
+
 @font-face {
   font-family: "OpenSans";
   src: local("OpenSans-Regular"),

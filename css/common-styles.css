@@ -54,6 +54,15 @@ img {
   list-style-type: none;
 }
 
+.heading {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  color: #333;
+}
+
 .text {
   margin: 0;
 }
@@ -78,11 +87,15 @@ img {
 }
 
 @media screen and (max-width: 576px) {
+  .heading {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
   .burger {
     width: 25px;
     height: 18px;
   }
-
   .burger [class*="bar-"] {
     height: 11.1%;
     margin-bottom: 24%;

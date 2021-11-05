@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/simplebar.css">
   <link rel="stylesheet" href="css/swiper-bundle.css">
+  <link rel="stylesheet" href="css/choises.min.css">
   <link rel="stylesheet" href="css/burger-menu.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="favicon.svg" type="image/xml+svg">
@@ -167,7 +168,7 @@
   <section class="hero">
     <div class="container hero__container">
       <div class="hero__content">
-        <h2 class="text hero__heading">Прикоснитесь к&nbsp;прекрасному</h2>
+        <h2 class="heading hero__heading">Прикоснитесь к&nbsp;прекрасному</h2>
         <p class="text hero__descr">Мы вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для&nbsp;новых предложений.</p>
         <button class="btn hero__btn">Подписаться на&nbsp;рассылку</button>
       </div>
@@ -190,25 +191,146 @@
 <section class="about">
   <div class="container about__container">
     <div class="about__content">
-      <h2 class="text about__heading">О&nbsp;нас</h2>
+      <h2 class="heading about__heading">О&nbsp;нас</h2>
       <p class="text about__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как&nbsp;способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что&nbsp;высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container gallery__container">
+    <div class="gallery__content">
+      <h2 class="heading gallery__heading">Галерея</h2>
+      <label class="gallery__filter">
+        <span class="gallery__filter-text">Фильтр</span>
+        <select class="gallery__select" name="gallery__select" id="gallery__select">
+          <option value="1">Живопись</option>
+          <option value="2">Рисунок</option>
+          <option value="3">Скульптура</option>
+          <option value="4">Категория 3</option>
+          <option value="all">Все</option>
+        </select>
+      </label>
+      <p class="text gallery__text">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__link" target="_blank" rel="noopener noreferrer">авторизуйтесь</a>, либо воспользуйтесь лицензией. </p>
+      <div class="gallery__swiper swiper">
+        <div class="swiper-wrapper gallery__swiper-wrapper">
+          <div class="swiper-slide gallery__slide" data-set="1">1</div>
+          <div class="swiper-slide gallery__slide" data-set="2">2</div>
+          <div class="swiper-slide gallery__slide" data-set="3">3</div>
+          <div class="swiper-slide gallery__slide" data-set="4">4</div>
+          <div class="swiper-slide gallery__slide" data-set="1">5</div>
+          <div class="swiper-slide gallery__slide" data-set="2">6</div>
+          <div class="swiper-slide gallery__slide" data-set="3">7</div>
+          <div class="swiper-slide gallery__slide" data-set="4">8</div>
+          <div class="swiper-slide gallery__slide" data-set="1">9</div>
+          <div class="swiper-slide gallery__slide" data-set="2">10</div>
+          <div class="swiper-slide gallery__slide" data-set="3">11</div>
+          <div class="swiper-slide gallery__slide" data-set="4">12</div>
+          <div class="swiper-slide gallery__slide" data-set="1">13</div>
+          <div class="swiper-slide gallery__slide" data-set="2">14</div>
+          <div class="swiper-slide gallery__slide" data-set="3">15</div>
+          <div class="swiper-slide gallery__slide" data-set="4">16</div>
+          <div class="swiper-slide gallery__slide" data-set="1">17</div>
+          <div class="swiper-slide gallery__slide" data-set="2">18</div>
+          <div class="swiper-slide gallery__slide" data-set="3">19</div>
+          <div class="swiper-slide gallery__slide" data-set="4">20</div>
+          <div class="swiper-slide gallery__slide" data-set="1">21</div>
+          <div class="swiper-slide gallery__slide" data-set="2">22</div>
+          <div class="swiper-slide gallery__slide" data-set="3">23</div>
+          <div class="swiper-slide gallery__slide" data-set="4">24</div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-navigation">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="catalogue">
+  <div class="container">
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
     </div>
   </div>
 </section>
 
 </main>
 
+
 <script src="js/index.js"></script>
 <script src="js/simplebar.min.js"></script>
 <script src="js/swiper-bundle.js"></script>
+
 <script>
-  const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  // width: 1400,
-  loop: true,
-  autoplay: {
-   delay: 5000,
-  },
+  const swiperHero = new Swiper('.hero__swiper', {
+    loop: true,
+    autoplay: {
+    delay: 5000,
+    },
+  })
+
+  const swiperGallery = new Swiper(".gallery__swiper", {
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+        grid: {
+          rows: 1,
+        },
+      },
+    // when window width is > 576px
+      577: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 34,
+        grid: {
+          rows: 2,
+        },
+      },
+      1025: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 50,
+        grid: {
+          rows: 2,
+        },
+      }
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    }
+    })
+
+</script>
+
+<script src="js/choises.min.js"></script>
+<script>
+  const element = document.querySelector('#gallery__select');
+  const choices = new Choices(element, {
+    searchEnabled: false,
+    itemSelectText: ''
   })
 </script>
 </body>
