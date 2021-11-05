@@ -36,3 +36,16 @@
   font-style: normal;
   font-display: swap;
 }
+:root {
+  --container-padding: 50px;
+  --theme-color: #9d5cd0;
+  --theme-color-light-outline: #d1a9f0;
+  --theme-color-light: #c283f3;
+  --theme-color-dark: #7943a4;
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --container-padding: 15px;
+  }
+}
