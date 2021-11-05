@@ -5,6 +5,13 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.dropdown__link').forEach(function(thumb) {
     thumb.parentElement.style.backgroundImage=`url('./img/dropdown/${thumb.innerHTML}.jpg')`
   })
+  document.querySelectorAll('.gallery__slide').forEach(function(thumb) {
+    if (window.innerWidth <= 576) {
+      thumb.style.backgroundImage=`url('../img/gallery/320/${thumb.innerHTML}.jpg')`
+    } else {
+      thumb.style.backgroundImage=`url('../img/gallery/${thumb.innerHTML}.jpg')`
+    }
+  })
 
   // get open/close function to dropdown
   document.addEventListener('click', function(event) {
@@ -56,5 +63,21 @@ window.addEventListener('DOMContentLoaded', function() {
       document.body.style.overflow = "auto";
     })
   })
+
+  // get open/close function to accordion
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
 
 })
