@@ -44,7 +44,17 @@
   border-radius: 6px;
   background-color: transparent;
   color: #fff;
+  transition-property: border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
+.choices[data-type*="select-one"]:hover .choices__inner {
+  background-color: var(--theme-color);
+}
+.choices[data-type*="select-one"]:focus .choices__inner {
+  border-color: var(--theme-color);
+}
+
 .choices[data-type*="select-one"]:after {
   content: "";
   height: 8px;
@@ -55,18 +65,25 @@
   border-width: 1px;
   transform: rotate(-45deg);
 }
+.choices[data-type*="select-one"].is-open:after {
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(135deg);
+  margin-top: 4px;
+}
 .choices__list--dropdown {
-  background-color: transparent;
+  background: transparent;
   border: 1px solid #999;
   top: 100%;
   margin-top: 1px;
   border-radius: 6px;
   color: #fff;
+  z-index: 5;
 }
 .choices__item--choice {
   border: 1px solid #999;
 }
-.choices__list--dropdown .choices__item--choice.is-highlighted {
+.choices__list--dropdown
+  .choices__item--selectable.choices__item--choice.is-highlighted {
   background-color: var(--theme-color);
 }
 
@@ -80,9 +97,22 @@
 }
 .gallery__link {
   color: var(--theme-color);
+  border: 1px solid transparent;
+}
+.gallery__link:hover {
+  border-bottom-color: var(--theme-color);
+}
+.gallery__link:focus {
+  color: #fff;
+  background-color: var(--theme-color);
+}
+.gallery__link:focus:active {
+  color: var(--theme-color-dark);
+  border-bottom-color: var(--theme-color-dark);
 }
 
 .gallery__swiper {
+  position: static;
   padding-top: 75px;
   width: 71.875%;
   overflow-x: hidden;
@@ -95,15 +125,65 @@
 .gallery__slide {
   flex-shrink: 0;
   height: 350px;
+  color: transparent;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
+.gallery__slide::before,
+.gallery__slide::after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, border-color, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+.gallery__slide::before {
+  border: 2px solid transparent;
+}
+.gallery__slide::after {
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/gallery/gallery-hover.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.gallery__slide:focus::before {
+  opacity: 1;
+  visibility: visible;
+  background-color: transparent;
+  border-color: var(--theme-color-dark);
+}
+
+.gallery__slide:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery__slide:active::before {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(194, 131, 243, 0.4);
+  border-color: rgba(194, 131, 243, 0.4);
+}
 
 .swiper-navigation {
   position: absolute;
-  top: 15px;
-  left: -7px;
+  top: 104px;
+  left: calc(var(--container-padding) + 18px + 25%);
   width: 150px;
   height: 30px;
 }
@@ -141,12 +221,28 @@
 .swiper-button-next::after {
   transform: rotate(-45deg);
 }
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: var(--theme-color);
+}
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  outline: 2px solid #000;
+}
+.swiper-button-prev:focus:active,
+.swiper-button-next:focus:active {
+  background-color: var(--theme-color-dark);
+  outline: 2px solid #000;
+}
+.swiper-button-disabled {
+  opacity: 0.5;
+}
 
 @media screen and (max-width: 1024px) {
   .gallery__content {
     padding: 90px 0 70px;
     min-height: 839px;
-    max-height: 900px;
+    height: 839px;
   }
   .gallery__filter {
     display: flex;
@@ -164,6 +260,10 @@
   }
   .gallery__slide {
     height: 280px;
+  }
+  .swiper-navigation {
+    top: 104px;
+    left: calc(var(--container-padding) + 18px + 30.3%);
   }
 }
 
@@ -183,6 +283,11 @@
   .choices[data-type*="select-one"] {
     width: 280px;
   }
+  .choices__list--dropdown {
+    background-image: url("../img/backgrounds/gallery-bg-320.jpg");
+    background-size: 100vw auto;
+    background-position: 20% 30%;
+  }
   .gallery__text {
     width: 100%;
     order: 5;
@@ -198,8 +303,8 @@
     height: 280px;
   }
   .swiper-navigation {
-    top: 53px;
-    left: -7px;
+    top: 293px;
+    left: 43px;
     width: 146px;
     height: 30px;
   }
@@ -244,7 +349,7 @@
   }
   .swiper-navigation {
     z-index: 1;
-    top: calc(114.7vw + 20px);
+    top: calc(114.7vw + 237px);
     left: calc(50% - 75px);
     width: 149px;
     height: 30px;
