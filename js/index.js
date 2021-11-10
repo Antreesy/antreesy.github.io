@@ -1,21 +1,23 @@
 window.addEventListener('DOMContentLoaded', function() {
   function hasClass(array, classSearched) {for (i = 0; i < array.length; ++i) {if (array[i] === classSearched) return true;};return false}
   let dropdownBtns = document.querySelectorAll('.dropdown__btn')
-  // Set BG to dropdown items
-  document.querySelectorAll('.dropdown__link').forEach(function(thumb) {
-    thumb.parentElement.style.backgroundImage=`url('./img/dropdown/${thumb.innerHTML}.jpg')`
-  })
-  document.querySelectorAll('.gallery__slide').forEach(function(thumb) {
-    if (window.innerWidth <= 576) {
-      thumb.style.backgroundImage=`url('../img/gallery/320/${thumb.innerHTML}.jpg')`
-    } else {
-      thumb.style.backgroundImage=`url('../img/gallery/${thumb.innerHTML}.jpg')`
-    }
-  })
+
+
+
+  // Set BG to gallery items
+  document.querySelectorAll('.gallery__slide').forEach(function(slide) {
+    if (window.innerWidth <= 576) {slide.style.backgroundImage=`url('../img/gallery/320/${slide.getAttribute('data-set')}.jpg')`}
+      else {slide.style.backgroundImage=`url('../img/gallery/${slide.getAttribute('data-set')}.jpg')`};
+  });
 
   // get open/close function to dropdown
   document.addEventListener('click', function(event) {
     if (hasClass(event.target.classList, 'dropdown__btn')) {
+      // Set BG to dropdown items
+      document.querySelectorAll('.dropdown__link').forEach(function(thumb) {
+        thumb.parentElement.style.backgroundImage=`url('./img/dropdown/${thumb.innerHTML}.jpg')`
+      });
+
       if (hasClass(event.target.classList, 'is-active')) {
         dropdownBtns.forEach(function(del) {del.classList.remove('is-active')});
       } else {
@@ -25,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function() {
     } else {
       dropdownBtns.forEach(function(del) {del.classList.remove('is-active')});
     };
-  })
+  });
 
     // get open/close function to search
   const searchOpen = document.querySelector('.header__search-clicker');
@@ -49,7 +51,7 @@ window.addEventListener('DOMContentLoaded', function() {
       searchOpen.setAttribute('tabindex', '0');
       searchInput.value="";
     })
-  })
+  });
 
   // get open/close function to burger menu
   const burgerOpen = document.querySelector('.burger__opener')
@@ -62,22 +64,80 @@ window.addEventListener('DOMContentLoaded', function() {
       menu.classList.remove('is-active');
       document.body.style.overflow = "auto";
     })
-  })
+  });
 
   // get open/close function to accordion
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+  const activeAcc = document.querySelector(".accordion__btn.active");
+  let panel = activeAcc.nextElementSibling;
+  if (panel.style.maxHeight) {panel.style.maxHeight = null}
+    else {panel.style.maxHeight = '100%'};
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
+  const accs = document.querySelectorAll(".accordion__btn");
+  accs.forEach(function(acc) {
+    acc.addEventListener("click", function() {
       this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {panel.style.maxHeight = null}
+        else {panel.style.maxHeight = '100%'};
     });
+  });
+
+  // get author changing for accordion
+  document.querySelector('.accordion').addEventListener('click', function(event) {
+   if (event.target.className === "panel__link") {
+    if (event.target.textContent === "Доменико Гирландайо") {
+      document.querySelector(".card__pic").setAttribute("src", "./img/catalogue/catalogue-girlandayo.jpg")
+      document.querySelector(".card__pic").setAttribute("alt", "Доменико Гирландайо")
+      document.querySelector(".card__title").textContent = "Доменико Гирландайо"
+      document.querySelector(".card__date").textContent = "2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494."
+      document.querySelector(".card__text").innerHTML = "Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени)."
+    } else {
+      document.querySelector(".card__pic").setAttribute("src", "./img/catalogue/catalogue-placeholder.jpg")
+      document.querySelector(".card__pic").setAttribute("alt", "Неизвестный художник")
+      document.querySelector(".card__title").textContent = "Что мы о нём знаем?"
+      document.querySelector(".card__date").textContent = ""
+      document.querySelector(".card__text").innerHTML = `Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!<br><a href="#gallery" class="link-placeholder">В галерею</a>`
+    }
   }
+  })
+
+
+  // get show-more btn for events
+  function showMore() {
+    let perView = (window.innerWidth <= 768) ? 2 : 3;
+    let visibles = -1;
+    for(let i = 0; i < eventCards.length; i++) {
+      if (eventCards[i].style.display === "flex") visibles = i;
+    }
+    for(let i = visibles+1; i < visibles+1+perView; i++) {
+      if (eventCards[i]) eventCards[i].style.display = "flex";
+    }
+    visibles += perView;
+    if (visibles >= eventCards.length-1) document.querySelector('.events__btn-wrapper').style.display = "none";
+  }
+
+  const eventCards = document.querySelectorAll('.events__card');
+  if (window.innerWidth <= 576) {
+    document.querySelector('.events__btn').style.display = "none";
+    for (let i = 0; i < eventCards.length; i++) {
+      eventCards[i].style.display = "flex";
+      let pages = document.createElement('button');
+      pages.classList.add("events__pagination");
+      pages.addEventListener('click', function(event) {
+        document.querySelectorAll(".events__pagination").forEach(function(btn) {btn.classList.remove('active')});
+        event.target.classList.add('active')
+        document.querySelector(".events__wrapper").style.transform = `translateX(${-100*i}vw)`
+      })
+      document.querySelector('.events__btn-wrapper').append(pages)
+    }
+      document.querySelector(".events__pagination").classList.add("active")
+
+  } else {
+    showMore();
+    document.querySelector('.events__btn').addEventListener('click', function() {
+      showMore();
+    })
+  }
+
 
 })

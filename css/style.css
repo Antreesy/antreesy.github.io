@@ -3,6 +3,7 @@
 @import url("hero-styles.css");
 @import url("gallery-styles.css");
 @import url("catalogue-styles.css");
+@import url("events-styles.css");
 
 @font-face {
   font-family: "OpenSans";

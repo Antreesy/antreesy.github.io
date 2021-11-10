@@ -125,7 +125,7 @@
 } */
 
 .about__content {
-  padding: 88px 0 71px;
+  padding: 88px 0 70px;
   max-width: 1080px;
   color: #333;
 }
@@ -150,7 +150,7 @@
     background-image: url("../img/backgrounds/hero-bg3-1024.jpg");
   }
   .hero__content {
-    padding: 212px 0 113px;
+    padding: 212px 0 114px;
     max-width: 660px;
   }
   .hero__heading {
