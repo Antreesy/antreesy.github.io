@@ -3,7 +3,9 @@
 /* .catalogue__container {
 } */
 .catalogue__content {
+
   padding: 88px 0 50px;
+
 }
 .catalogue__heading {
   margin-bottom: 25px;
@@ -12,7 +14,9 @@
 } */
 .catalogue__descr {
   max-width: 1080px;
+
   margin-bottom: 39px;
+
   font-size: 16px;
   line-height: 32px;
   color: #333;
@@ -28,7 +32,9 @@
   margin-right: 3.125%;
 }
 .card__pic {
+
   margin-bottom: 28px;
+
 }
 .card__title {
   margin: 0;
@@ -61,7 +67,9 @@
   background-color: transparent;
   width: 100%;
   cursor: pointer;
+
   padding: 40.5px 0;
+
   text-align: left;
   border: none;
   border-top: 1px solid #cacaca;
@@ -98,10 +106,12 @@
   flex-shrink: 0;
   justify-content: start;
   align-content: space-between;
+
   height: calc(625px - 14.8vw);
   max-height: 440px;
   width: 100%;
   padding: 25px 14.2% 25px 0;
+
 }
 .panel__item {
   margin-right: 1em;
@@ -142,6 +152,7 @@
   line-height: 22px;
   color: #9d5cd0;
 }
+
 
 @media screen and (max-width: 1024px) {
   .tab__card {

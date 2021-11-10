@@ -111,8 +111,10 @@
   border-bottom-color: var(--theme-color-dark);
 }
 
+
 .gallery__swiper-container {
   position: relative;
+
   width: 71.875%;
   padding-top: 77px;
   padding-left: 1px;
@@ -186,8 +188,10 @@
 
 .swiper-navigation {
   position: absolute;
+
   top: 17px;
   left: -5px;
+
   width: 150px;
   height: 30px;
 }
@@ -271,7 +275,9 @@
     height: 280px;
   }
   .swiper-navigation {
+
     left: -9px;
+
   }
 }
 
@@ -314,8 +320,10 @@
     height: 280px;
   }
   .swiper-navigation {
+
     top: 52px;
     left: -6px;
+
     width: 146px;
     height: 30px;
   }
@@ -360,7 +368,7 @@
   }
   .swiper-navigation {
     z-index: 1;
-    top: calc(114.7vw + 20px);
+    top: calc(114.7vw + 237px);
     left: calc(50% - 75px);
     width: 149px;
     height: 30px;

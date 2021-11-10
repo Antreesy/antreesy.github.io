@@ -3,7 +3,6 @@ window.addEventListener('DOMContentLoaded', function() {
   let dropdownBtns = document.querySelectorAll('.dropdown__btn')
 
 
-
   // Set BG to gallery items
   document.querySelectorAll('.gallery__slide').forEach(function(slide) {
     if (window.innerWidth <= 576) {slide.style.backgroundImage=`url('../img/gallery/320/${slide.getAttribute('data-set')}.jpg')`}
@@ -67,6 +66,7 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   // get open/close function to accordion
+
   const activeAcc = document.querySelector(".accordion__btn.active");
   let panel = activeAcc.nextElementSibling;
   if (panel.style.maxHeight) {panel.style.maxHeight = null}
@@ -78,7 +78,9 @@ window.addEventListener('DOMContentLoaded', function() {
       this.classList.toggle("active");
       let panel = this.nextElementSibling;
       if (panel.style.maxHeight) {panel.style.maxHeight = null}
+
         else {panel.style.maxHeight = '100%'};
+
     });
   });
 
@@ -114,7 +116,10 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     visibles += perView;
     if (visibles >= eventCards.length-1) document.querySelector('.events__btn-wrapper').style.display = "none";
+
   }
+  })
+
 
   const eventCards = document.querySelectorAll('.events__card');
   if (window.innerWidth <= 576) {
@@ -138,6 +143,5 @@ window.addEventListener('DOMContentLoaded', function() {
       showMore();
     })
   }
-
 
 })
