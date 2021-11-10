@@ -11,18 +11,18 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: 88px 0 70px;
-  min-height: 994px;
+  min-height: 995px;
   max-height: 1000px;
 }
 .gallery__heading {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   color: #fff;
 }
 
 .gallery__filter {
   display: flex;
   flex-direction: column;
-  margin-right: 45px;
+  margin-right: 46px;
   margin-bottom: auto;
   width: 25%;
 }
@@ -111,10 +111,16 @@
   border-bottom-color: var(--theme-color-dark);
 }
 
+
+.gallery__swiper-container {
+  position: relative;
+
+  width: 71.875%;
+  padding-top: 77px;
+  padding-left: 1px;
+}
 .gallery__swiper {
   position: static;
-  padding-top: 75px;
-  width: 71.875%;
   overflow-x: hidden;
 }
 /* .swiper {
@@ -182,8 +188,10 @@
 
 .swiper-navigation {
   position: absolute;
-  top: 104px;
-  left: calc(var(--container-padding) + 18px + 25%);
+
+  top: 17px;
+  left: -5px;
+
   width: 150px;
   height: 30px;
 }
@@ -239,8 +247,11 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .gallery {
+    background-image: url("../img/backgrounds/gallery-bg-1024.jpg");
+  }
   .gallery__content {
-    padding: 90px 0 70px;
+    padding: 89px 0 70px;
     min-height: 839px;
     height: 839px;
   }
@@ -254,24 +265,30 @@
   .gallery__text {
     width: 30.3%;
   }
-  .gallery__swiper {
-    padding-top: 75px;
+
+  .gallery__swiper-container {
+    padding-top: 76px;
+    padding-left: 0;
     width: 64.22%;
   }
   .gallery__slide {
     height: 280px;
   }
   .swiper-navigation {
-    top: 104px;
-    left: calc(var(--container-padding) + 18px + 30.3%);
+
+    left: -9px;
+
   }
 }
 
 @media screen and (max-width: 768px) {
+  .gallery {
+    background-image: url("../img/backgrounds/gallery-bg-768.jpg");
+  }
   .gallery__content {
     flex-wrap: nowrap;
-    padding: 90px 0 70px;
-    min-height: 1111px;
+    padding: 89px 0 70px;
+    min-height: 1112px;
     max-height: 1500px;
   }
   .gallery__filter {
@@ -292,7 +309,7 @@
     width: 100%;
     order: 5;
   }
-  .gallery__swiper {
+  .gallery__swiper-container {
     padding-top: 112px;
     width: 100%;
   }
@@ -303,8 +320,10 @@
     height: 280px;
   }
   .swiper-navigation {
-    top: 293px;
-    left: 43px;
+
+    top: 52px;
+    left: -6px;
+
     width: 146px;
     height: 30px;
   }
@@ -336,7 +355,7 @@
     width: 100%;
     order: 5;
   }
-  .gallery__swiper {
+  .gallery__swiper-container {
     padding-top: 0;
     padding-bottom: 71px;
     width: 100%;

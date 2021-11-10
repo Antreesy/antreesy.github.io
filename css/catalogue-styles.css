@@ -3,7 +3,9 @@
 /* .catalogue__container {
 } */
 .catalogue__content {
-  padding: 88px 0 80px;
+
+  padding: 88px 0 50px;
+
 }
 .catalogue__heading {
   margin-bottom: 25px;
@@ -12,7 +14,9 @@
 } */
 .catalogue__descr {
   max-width: 1080px;
-  margin-bottom: 40px;
+
+  margin-bottom: 39px;
+
   font-size: 16px;
   line-height: 32px;
   color: #333;
@@ -28,7 +32,9 @@
   margin-right: 3.125%;
 }
 .card__pic {
-  margin-bottom: 26px;
+
+  margin-bottom: 28px;
+
 }
 .card__title {
   margin: 0;
@@ -61,7 +67,9 @@
   background-color: transparent;
   width: 100%;
   cursor: pointer;
-  padding: 41px 0;
+
+  padding: 40.5px 0;
+
   text-align: left;
   border: none;
   border-top: 1px solid #cacaca;
@@ -73,6 +81,9 @@
   color: #333333;
   transition: 0.4s;
 }
+/* .accordion__btn.active {
+  max-height: 500px;
+} */
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
@@ -95,10 +106,12 @@
   flex-shrink: 0;
   justify-content: start;
   align-content: space-between;
-  height: calc(630px - 14.8vw);
+
+  height: calc(625px - 14.8vw);
   max-height: 440px;
   width: 100%;
-  padding: 24px 13.6% 24px 0;
+  padding: 25px 14.2% 25px 0;
+
 }
 .panel__item {
   margin-right: 1em;
@@ -139,5 +152,73 @@
   line-height: 22px;
   color: #9d5cd0;
 }
-@media screen and (max-width: 1920px) {
+
+
+@media screen and (max-width: 1024px) {
+  .tab__card {
+    width: 47.29%;
+    margin-right: 5.41%;
+  }
+  .tab__accordion {
+    width: 47.29%;
+  }
+  .panel__list {
+    height: calc(635px - 14.8vw);
+    max-height: 436px;
+    padding: 25px 0;
+  }
+  .panel__item {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .catalogue__tab {
+    flex-direction: column-reverse;
+  }
+  .catalogue__descr {
+    margin-bottom: 20px;
+  }
+  .tab__card {
+    width: 100%;
+    margin-right: 0;
+  }
+  .tab__accordion {
+    width: 100%;
+    margin-bottom: 51px;
+  }
+  .panel__list {
+    height: calc(452px - 14.8vw);
+    max-height: 436px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .catalogue__content {
+    padding: 56px 0 30px;
+  }
+  .catalogue__descr {
+    display: none;
+  }
+  .catalogue__heading {
+    margin-bottom: 69px;
+  }
+  .accordion__btn {
+    padding: 19.5px 0;
+    font-size: 18px;
+  }
+  .panel__list {
+    height: 100%;
+    max-height: 810px;
+    padding: 20px 0;
+  }
+  .card__pic {
+    margin-bottom: 18px;
+  }
+  .card__title {
+    margin-bottom: 12px;
+  }
+  .card__text {
+    padding-right: 2px;
+  }
 }

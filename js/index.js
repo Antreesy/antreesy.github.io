@@ -2,10 +2,6 @@ window.addEventListener('DOMContentLoaded', function() {
   function hasClass(array, classSearched) {for (i = 0; i < array.length; ++i) {if (array[i] === classSearched) return true;};return false}
   let dropdownBtns = document.querySelectorAll('.dropdown__btn')
 
-  // Set BG to dropdown items
-  document.querySelectorAll('.dropdown__link').forEach(function(thumb) {
-    thumb.parentElement.style.backgroundImage=`url('./img/dropdown/${thumb.innerHTML}.jpg')`
-  });
 
   // Set BG to gallery items
   document.querySelectorAll('.gallery__slide').forEach(function(slide) {
@@ -16,6 +12,11 @@ window.addEventListener('DOMContentLoaded', function() {
   // get open/close function to dropdown
   document.addEventListener('click', function(event) {
     if (hasClass(event.target.classList, 'dropdown__btn')) {
+      // Set BG to dropdown items
+      document.querySelectorAll('.dropdown__link').forEach(function(thumb) {
+        thumb.parentElement.style.backgroundImage=`url('./img/dropdown/${thumb.innerHTML}.jpg')`
+      });
+
       if (hasClass(event.target.classList, 'is-active')) {
         dropdownBtns.forEach(function(del) {del.classList.remove('is-active')});
       } else {
@@ -65,13 +66,21 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   // get open/close function to accordion
+
+  const activeAcc = document.querySelector(".accordion__btn.active");
+  let panel = activeAcc.nextElementSibling;
+  if (panel.style.maxHeight) {panel.style.maxHeight = null}
+    else {panel.style.maxHeight = '100%'};
+
   const accs = document.querySelectorAll(".accordion__btn");
   accs.forEach(function(acc) {
     acc.addEventListener("click", function() {
       this.classList.toggle("active");
       let panel = this.nextElementSibling;
       if (panel.style.maxHeight) {panel.style.maxHeight = null}
-        else {panel.style.maxHeight = '500px'};
+
+        else {panel.style.maxHeight = '100%'};
+
     });
   });
 
@@ -97,18 +106,42 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // get show-more btn for events
   function showMore() {
-    const eventCards = document.querySelectorAll('.events__card');
+    let perView = (window.innerWidth <= 768) ? 2 : 3;
     let visibles = -1;
     for(let i = 0; i < eventCards.length; i++) {
-      if (eventCards[i].style.display === "block") visibles = i;
+      if (eventCards[i].style.display === "flex") visibles = i;
     }
-    for(let i = visibles+1; i < visibles+4; i++) {
-      if (eventCards[i]) eventCards[i].style.display = "block";
+    for(let i = visibles+1; i < visibles+1+perView; i++) {
+      if (eventCards[i]) eventCards[i].style.display = "flex";
     }
+    visibles += perView;
+    if (visibles >= eventCards.length-1) document.querySelector('.events__btn-wrapper').style.display = "none";
+
+  }
+  })
+
+
+  const eventCards = document.querySelectorAll('.events__card');
+  if (window.innerWidth <= 576) {
+    document.querySelector('.events__btn').style.display = "none";
+    for (let i = 0; i < eventCards.length; i++) {
+      eventCards[i].style.display = "flex";
+      let pages = document.createElement('button');
+      pages.classList.add("events__pagination");
+      pages.addEventListener('click', function(event) {
+        document.querySelectorAll(".events__pagination").forEach(function(btn) {btn.classList.remove('active')});
+        event.target.classList.add('active')
+        document.querySelector(".events__wrapper").style.transform = `translateX(${-100*i}vw)`
+      })
+      document.querySelector('.events__btn-wrapper').append(pages)
+    }
+      document.querySelector(".events__pagination").classList.add("active")
+
+  } else {
+    showMore();
+    document.querySelector('.events__btn').addEventListener('click', function() {
+      showMore();
+    })
   }
 
-  showMore();
-  document.querySelector('.events__btn').addEventListener('click', function() {
-    showMore();
-  })
 })
