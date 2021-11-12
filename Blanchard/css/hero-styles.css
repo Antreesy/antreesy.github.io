@@ -1,8 +1,8 @@
 .hero {
   position: relative;
+  overflow: hidden;
   color: #fff;
   background-color: #222;
-  overflow: hidden;
 }
 
 .hero__container {
@@ -41,14 +41,14 @@
   -ms-flex-item-align: start;
   align-self: flex-start;
   padding: 17px 32px;
+  border: 3px solid var(--theme-color);
   border-radius: 100px;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
-  border: 3px solid #9d5cd0;
   outline: 2px solid transparent;
   outline-offset: 3px;
-  background-color: #9d5cd0;
+  background-color: var(--theme-color);
   -webkit-transition-property: border-color, background-color, outline-color;
   -o-transition-property: border-color, background-color, outline-color;
   transition-property: border-color, background-color, outline-color;
@@ -61,11 +61,11 @@
 }
 
 .hero__btn:focus {
-  outline-color: #c283f3;
+  outline-color: var(--theme-color-light-outline);
 }
 .hero__btn:focus:active {
-  border-color: #d1a9f0;
-  background-color: #7943a4;
+  border-color: var(--theme-color-light);
+  background-color: var(--theme-color-dark);
   outline-color: transparent;
 }
 
@@ -179,12 +179,12 @@
     max-width: 660px;
   }
   .hero__heading {
-    font-size: 9.375vw;
     margin-bottom: 11px;
+    font-size: 9.375vw;
   }
   .hero__descr {
-    font-size: 2.35vw;
     margin-bottom: 134px;
+    font-size: 2.35vw;
   }
 }
 
@@ -195,11 +195,10 @@
   }
   .hero__heading {
     font-size: 10vw;
-    margin-bottom: 11px;
   }
   .hero__descr {
-    font-size: 3.75vw;
     margin-bottom: 134px;
+    font-size: 3.75vw;
   }
   .hero__btn {
     -ms-flex-item-align: center;
@@ -220,11 +219,11 @@
     background-image: url("../img/backgrounds/hero-bg3-320.jpg");
   }
   .hero__content {
-    margin: 0 auto;
-    padding: 78px 10px 44px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: 0 auto;
+    padding: 78px 10px 44px;
     max-width: 290px;
   }
   .hero__heading {
@@ -233,10 +232,10 @@
     text-align: center;
   }
   .hero__descr {
+    margin-bottom: 44px;
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    margin-bottom: 44px;
   }
   .hero__btn {
     padding: 10px 15px 12px;
