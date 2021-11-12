@@ -218,35 +218,35 @@
       <div class="gallery__swiper-container">
         <div class="swiper gallery__swiper">
           <div class="swiper-navigation">         <!-- Navigation buttons -->
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="gallery-pagination swiper-pagination"></div>
+            <div class="gallery-button-prev swiper-button-prev"></div>
+            <div class="gallery-button-next swiper-button-next"></div>
           </div>
           <div class="swiper-wrapper gallery__swiper-wrapper">
-            <div class="swiper-slide gallery__slide" data-set="1" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="2" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="3" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="4" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="5" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="6" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="7" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="8" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="9" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="10" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="11" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="12" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="13" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="14" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="15" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="16" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="17" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="18" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="19" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="20" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="21" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="22" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="23" tabindex="0"></div>
-            <div class="swiper-slide gallery__slide" data-set="24" tabindex="0"></div>
+            <button class="swiper-slide gallery__slide" data-set="1"></button>
+            <button class="swiper-slide gallery__slide" data-set="2"></button>
+            <button class="swiper-slide gallery__slide" data-set="3"></button>
+            <button class="swiper-slide gallery__slide" data-set="4"></button>
+            <button class="swiper-slide gallery__slide" data-set="5"></button>
+            <button class="swiper-slide gallery__slide" data-set="6"></button>
+            <button class="swiper-slide gallery__slide" data-set="7"></button>
+            <button class="swiper-slide gallery__slide" data-set="8"></button>
+            <button class="swiper-slide gallery__slide" data-set="9"></button>
+            <button class="swiper-slide gallery__slide" data-set="10"></button>
+            <button class="swiper-slide gallery__slide" data-set="11"></button>
+            <button class="swiper-slide gallery__slide" data-set="12"></button>
+            <button class="swiper-slide gallery__slide" data-set="13"></button>
+            <button class="swiper-slide gallery__slide" data-set="14"></button>
+            <button class="swiper-slide gallery__slide" data-set="15"></button>
+            <button class="swiper-slide gallery__slide" data-set="16"></button>
+            <button class="swiper-slide gallery__slide" data-set="17"></button>
+            <button class="swiper-slide gallery__slide" data-set="18"></button>
+            <button class="swiper-slide gallery__slide" data-set="19"></button>
+            <button class="swiper-slide gallery__slide" data-set="20"></button>
+            <button class="swiper-slide gallery__slide" data-set="21"></button>
+            <button class="swiper-slide gallery__slide" data-set="22"></button>
+            <button class="swiper-slide gallery__slide" data-set="23"></button>
+            <button class="swiper-slide gallery__slide" data-set="24"></button>
           </div>
         </div>
       </div>
@@ -260,11 +260,11 @@
     <div class="content catalogue__content">
       <h2 class="heading catalogue__heading">Каталог</h2>
       <div class="flags-wrapper">
-        <button class="flag flag_fr" data-set="fr"></button>
-        <button class="flag flag_de" data-set="de"></button>
-        <button class="flag flag_it is-active" data-set="it"></button>
-        <button class="flag flag_ru" data-set="ru"></button>
-        <button class="flag flag_be" data-set="be"></button>
+        <button class="flag flag_fr" data-set="fr" data-num="0"></button>
+        <button class="flag flag_de" data-set="de" data-num="1"></button>
+        <button class="flag flag_it is-active" data-set="it" data-num="2"></button>
+        <button class="flag flag_ru" data-set="ru" data-num="3"></button>
+        <button class="flag flag_be" data-set="be" data-num="4"></button>
 
       </div>
 
@@ -280,485 +280,487 @@
             Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
           </p>
         </div>
-        <div class="tab__accordion-wrapper">
-          <div class="accordion tab__accordion" data-target="fr">
-            <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
-            <div class="panel accordion__panel">
-              <ul class="ul panel__list">
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Ангеран Шарантон</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Никола Фроман</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Жан Перреаль</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Бурдишон</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Бартелеми де Клерк</a>
-                </li>
-              </ul>
-            </div>
-            <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+        <div class="tab__accordion-container">
+          <div class="tab__accordion-wrapper">
+            <div class="accordion tab__accordion" data-target="fr">
+              <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
+              <div class="panel accordion__panel">
+                <ul class="ul panel__list">
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Ангеран Шарантон</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Никола Фроман</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Жан Перреаль</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Бурдишон</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Бартелеми де Клерк</a>
+                  </li>
+                </ul>
+              </div>
+              <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 2000 г.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+            <div class="accordion tab__accordion" data-target="de">
+              <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
+              <div class="panel accordion__panel">
+                <ul class="ul panel__list">
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Бургкмайр, Ханс</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Лохнер, Штефан</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Мозер, Лукас</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Роде, Герман</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Цайтблом, Бартоломеус</a>
+                  </li>
+                </ul>
+              </div>
+              <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 2000 г.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+            <div class="accordion tab__accordion" data-target="it">
+              <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
+              <div class="panel accordion__panel">
+                <ul class="ul panel__list">
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Биссоло, Франческо</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Брамантино</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Бреа, Людовико</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Бьяджо д'Антонио Туччи</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Веккьетта</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Андреа Вероккьо</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Доменико Гирландайо</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Граначчи, Франческо</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Джованни да Удине</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Джованни ди Паоло</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Джорджоне</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Парентино, Бернардо</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Пезеллино</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Пьетро Перуджино</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Перуцци, Бальдассаре</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Пизанелло</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </div>
+              <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 2000 г.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+            <div class="accordion tab__accordion" data-target="ru">
+              <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
+              <div class="panel accordion__panel">
+                <ul class="ul panel__list">
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Амвросий</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Дионисий</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Андрей Рублёв</a>
+                  </li>
+                </ul>
+              </div>
+              <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
+                </div>
+              </div>
+              <button class="accordion__btn"><span>C 2000 г.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+            <div class="accordion tab__accordion" data-target="be">
+              <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
+              <div class="panel accordion__panel">
+                <ul class="ul panel__list">
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Ян ван Эйк</a>
+                  </li>
+                  <li class="panel__item">
+                    <a class="panel__link" href="#catalogue__card">Петрус Кристус</a>
+                  </li>
+                </ul>
+              </div>
+              <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <button class="accordion__btn"><span>C 2000 г.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+              <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="accordion tab__accordion" data-target="de">
-            <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
-            <div class="panel accordion__panel">
-              <ul class="ul panel__list">
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Бургкмайр, Ханс</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Лохнер, Штефан</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Мозер, Лукас</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Роде, Герман</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Цайтблом, Бартоломеус</a>
-                </li>
-              </ul>
-            </div>
-            <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+              <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+              <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+              <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 2000 г.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion tab__accordion" data-target="it">
-            <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
-            <div class="panel accordion__panel">
-              <ul class="ul panel__list">
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Бенедетто ди Биндо</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Бергоньоне, Амброджо</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Биссоло, Франческо</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Больтраффио, Джованни</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Бонсиньори, Франческо</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Боттичини, Рафаэлло</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Брамантино</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Бреа, Людовико</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Бьяджо д'Антонио Туччи</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Веккьетта</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Андреа Вероккьо</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Доменико Гирландайо</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Беноццо Гоццоли</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Граначчи, Франческо</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Грегорио ди Чекко</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Джованни да Удине</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Джованни ди Паоло</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Джорджоне</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Парентино, Бернардо</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Пезеллино</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Пьетро Перуджино</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Перуцци, Бальдассаре</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Пизанелло</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Пинтуриккьо</a>
-                </li>
-              </ul>
-            </div>
-            <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 2000 г.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion tab__accordion" data-target="ru">
-            <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
-            <div class="panel accordion__panel">
-              <ul class="ul panel__list">
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Амвросий</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Дионисий</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Андрей Рублёв</a>
-                </li>
-              </ul>
-            </div>
-            <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 2000 г.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion tab__accordion" data-target="be">
-            <button class="accordion__btn active"><span>C 1400 по 1499 гг.</span></button>
-            <div class="panel accordion__panel">
-              <ul class="ul panel__list">
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Ян ван Эйк</a>
-                </li>
-                <li class="panel__item">
-                  <a href="#catalogue__card" class="panel__link">Петрус Кристус</a>
-                </li>
-              </ul>
-            </div>
-            <button class="accordion__btn"><span>C 1500 по 1599 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1600 по 1699 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1700 по 1799 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1800 по 1899 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 1900 по 1999 гг.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
-                </div>
-              </div>
-            </div>
-            <button class="accordion__btn"><span>C 2000 г.</span></button>
-            <div class="panel accordion__panel">
-              <div class="panel-placeholder">
-                <div class="pic-placeholder"></div>
-                <div class="text-placeholder">
-                  <p class="caption-placeholder">Здесь пока пусто</p>
-                  <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                  <a href="#gallery" class="link-placeholder">В галерею</a>
+              <button class="accordion__btn"><span>C 2000 г.</span></button>
+              <div class="panel accordion__panel">
+                <div class="panel-placeholder">
+                  <div class="pic-placeholder"></div>
+                  <div class="text-placeholder">
+                    <p class="caption-placeholder">Здесь пока пусто</p>
+                    <p class="descr-placeholder">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                    <a class="link-placeholder" href="#gallery">В галерею</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -787,7 +789,7 @@
               </span>
               <h3 class="events__title">Книжная гравюра в живом восприятии</h3>
               <p class="text events__descr">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-              <a href="" class="link events__link">Подробнее</a>
+              <a class="link events__link" href="">Подробнее</a>
             </div>
           </article></div>
           <div class="events__slide"><article class="events__card">
@@ -799,7 +801,7 @@
               </span>
               <h3 class="events__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
               <p class="text events__descr">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
-              <a href="" class="link events__link">Подробнее</a>
+              <a class="link events__link" href="">Подробнее</a>
             </div>
           </article></div>
           <div class="events__slide"><article class="events__card">
@@ -811,7 +813,7 @@
               </span>
               <h3 class="events__title">Выставка «Формация 2020»</h3>
               <p class="text events__descr">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
-              <a href="" class="link events__link">Подробнее</a>
+              <a class="link events__link" href="">Подробнее</a>
             </div>
           </article></div>
           <div class="events__slide"><article class="events__card">
@@ -823,7 +825,7 @@
               </span>
               <h3 class="events__title">XXIV Международная биеннале молодого искусства</h3>
               <p class="text events__descr">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
-              <a href="" class="link events__link">Подробнее</a>
+              <a class="link events__link" href="">Подробнее</a>
             </div>
           </article></div>
           <div class="events__slide"><article class="events__card">
@@ -835,7 +837,7 @@
               </span>
               <h3 class="events__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
               <p class="text events__descr">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-              <a href="" class="link events__link">Подробнее</a>
+              <a class="link events__link" href="">Подробнее</a>
             </div>
           </article></div>
         </div>
@@ -849,67 +851,11 @@
 
 </main>
 
-
-<script src="js/index.js"></script>
-<script src="js/simplebar.min.js"></script>
-<script src="js/swiper-bundle.js"></script>
-
-<script>
-  const swiperHero = new Swiper('.hero__swiper', {
-    loop: true,
-    autoplay: {
-    delay: 5000,
-    },
-  })
-
-  const swiperGallery = new Swiper(".gallery__swiper", {
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 0,
-        grid: {
-          rows: 1,
-        },
-      },
-    // when window width is > 576px
-      577: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 34,
-        grid: {
-          rows: 2,
-        },
-      },
-      1025: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 50,
-        grid: {
-          rows: 2,
-        },
-      }
-    },
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-    }
-    })
-
-</script>
-
-<script src="js/choises.min.js"></script>
-<script>
-  const element = document.querySelector('#gallery__select');
-  const choices = new Choices(element, {
-    searchEnabled: false,
-    itemSelectText: ''
-  })
-</script>
+<!-- Libraries -->
+  <script src="js/simplebar.min.js"></script>
+  <script src="js/swiper-bundle.js"></script>
+  <script src="js/choises.min.js"></script>
+<!-- Script -->
+  <script src="js/index.js"></script>
 </body>
 </html>
