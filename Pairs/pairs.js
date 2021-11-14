@@ -1,4 +1,6 @@
 (()=>{
+  const eventTouch = ("ontouchstart" in window) ? 'touchend' : 'click';
+
   const pairs = {
     gameField: document.createElement("div"),
 
@@ -95,7 +97,7 @@
         cardsRefresh.textContent = 'Заново'
         // cardsRefresh.style.fontSize = `${4}vw`
         cardsRefresh.setAttribute('disabled', true)
-        cardsRefresh.addEventListener('click', ()=>{
+        cardsRefresh.addEventListener(eventTouch, ()=>{
           pairs.createField();
           getTry();
         })
@@ -132,7 +134,7 @@
     
     
         cardArray.forEach(element => {
-          element.addEventListener('click', (elem) => {
+          element.addEventListener(eventTouch, (elem) => {
             document.querySelectorAll('.btn-danger').forEach((elem)=>{
               elem.classList.remove('btn-danger');
               elem.removeAttribute('disabled');
@@ -195,7 +197,7 @@
       inputSubmit.className = 'col btn btn-warning'
       inputSubmit.textContent = 'Начать игру'
 
-      inputSubmit.addEventListener('click', (elem)=>{
+      inputSubmit.addEventListener(eventTouch, (elem)=>{
         elem.preventDefault();
         pairs.createField(inputRow.value, inputCol.value)
       })
