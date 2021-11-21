@@ -8,10 +8,20 @@ window.addEventListener('DOMContentLoaded', function() {
         if (array[i] === classSearched) return true;
       }
       return false;
-    };
+    }
 
-    // get open/close function to dropdown
+    // get open/close function to dropdown and search
+    const searchOpen = document.querySelector('.header__search-clicker');
     document.addEventListener('click', function(event) {
+      const searchModal = document.querySelector('.header__search');
+      const searchInput = document.querySelector('.search__input');
+      // const searchCancel = document.querySelector('.search__cancel');
+      searchModal.addEventListener('submit', function() {
+        searchOpen.classList.remove('search-is-active');
+        searchOpen.removeAttribute('tabindex');
+        searchInput.value="";
+      });
+
       if (hasClass(event.target.classList, 'dropdown__btn')) {
         // Set BG to dropdown items
         document.querySelectorAll('.dropdown__link').forEach(function(thumb) {
@@ -27,45 +37,40 @@ window.addEventListener('DOMContentLoaded', function() {
       } else {
         dropdownBtns.forEach(function(del) {del.classList.remove('is-active')});
       }
-    });
 
-      // get open/close function to search
-    const searchOpen = document.querySelector('.header__search-clicker');
-    searchOpen.addEventListener('click', function(event) {
-      const searchModal = document.querySelector('.header__search');
-      const searchInput = document.querySelector('.search__input');
-      const searchCancel = document.querySelector('.search__cancel');
-      if (hasClass(event.target.classList, 'is-active')) {
-      } else {
-        searchOpen.classList.add('is-active');
+      if (event.target !== searchModal && event.target !== searchInput && hasClass(searchOpen.classList, 'search-is-active')) {
+        searchOpen.classList.remove('search-is-active');
+        searchOpen.removeAttribute('tabindex');
+        searchInput.value="";
+      } else if (event.target === searchOpen && !hasClass(event.target.classList, 'search-is-active')) {
+        searchOpen.classList.add('search-is-active');
         searchOpen.setAttribute('tabindex', '-1');
         searchInput.focus();
       }
-      searchModal.addEventListener('submit', function() {
-        searchOpen.classList.remove('is-active');
-        searchOpen.setAttribute('tabindex', '0');
-        searchInput.value="";
-      });
-      searchCancel.addEventListener('click', function() {
-        searchOpen.classList.remove('is-active');
-        searchOpen.setAttribute('tabindex', '0');
-        searchInput.value="";
-      });
+
     });
+
 
     // get open/close function to burger menu
     const burgerOpen = document.querySelector('.burger__opener');
-    burgerOpen.addEventListener('click', function() {
+    burgerOpen.addEventListener('click', () => {
       const burgerClose = document.querySelector('.burger-closer');
       const menu = document.querySelector('.header__menu');
+      const navLink = document.querySelectorAll('.nav__link');
       menu.classList.add('is-active');
       document.body.style.overflow = "hidden";
-      burgerClose.addEventListener('click', function() {
+      burgerClose.addEventListener('click', () => {
         menu.classList.remove('is-active');
         document.body.style.overflow = "auto";
       });
+      navLink.forEach((link) => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('is-active');
+          document.body.style.overflow = "auto";
+        })
+      })
     });
-  };
+  }
   headerInit();
 
   //hero
@@ -80,16 +85,23 @@ window.addEventListener('DOMContentLoaded', function() {
   function galleryInit(){
     // init swiper
     const swiperGallery = new Swiper(".gallery__swiper", {
+      slidesPerView: 1,
+      // spaceBetween: 0,
+      grid: {
+        rows: 1,
+        fill: "row",
+      },
+
+      navigation: {
+        nextEl: '.gallery-button-next',
+        prevEl: '.gallery-button-prev',
+      },
+      pagination: {
+        el: '.gallery-pagination',
+        type: 'fraction',
+      },
+
       breakpoints: {
-        320: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-          spaceBetween: 0,
-          grid: {
-            rows: 1,
-          },
-        },
-      // when window width is > 576px
         577: {
           slidesPerView: 2,
           slidesPerGroup: 2,
@@ -107,16 +119,7 @@ window.addEventListener('DOMContentLoaded', function() {
           },
         }
       },
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      }
-      })
+    })
 
     // init choices
     const element = document.querySelector('#gallery__select');
@@ -124,16 +127,7 @@ window.addEventListener('DOMContentLoaded', function() {
       searchEnabled: false,
       itemSelectText: '',
     })
-
-    // fill images
-    document.querySelectorAll('.gallery__slide').forEach(function(slide) {
-      if (window.innerWidth <= 576) {
-        slide.style.backgroundImage=`url('./img/gallery/320/${slide.getAttribute('data-set')}.jpg')`;
-      } else {
-        slide.style.backgroundImage=`url('./img/gallery/${slide.getAttribute('data-set')}.jpg')`;
-      };
-    });
-  };
+  }
   galleryInit();
 
   // accordion
@@ -141,19 +135,21 @@ window.addEventListener('DOMContentLoaded', function() {
   // get tabs change
   const flags = document.querySelectorAll('.flag');
   const accs =  document.querySelectorAll('.tab__accordion');
-  function changeAcc(flags) {
+  function changeAcc() {
     const countryFlag = document.querySelector('.flag.is-active').getAttribute("data-set")
     // const countryPos = document.querySelector('.flag.is-active').getAttribute("data-num")
     accs.forEach((acc) => {
       if (acc.getAttribute("data-target") === countryFlag) {
         acc.classList.add("is-active");
         acc.classList.remove("visually-hidden");
+        acc.style.width = 100 + "%";
       } else {
         acc.classList.remove("is-active");
         acc.classList.add("visually-hidden");
+        acc.style.width = null;
       }
     });
-  };
+  }
   changeAcc(flags);
 
   flags.forEach((flag) => {
@@ -164,72 +160,54 @@ window.addEventListener('DOMContentLoaded', function() {
     })
   })
 
-    function getAccHeight() {
-      const allAccs = document.querySelectorAll(".tab__accordion.is-active .accordion__btn");
-      const allPans = document.querySelectorAll(".accordion.is-active .panel");
-      let accHeight = 0;
-      allAccs.forEach((acc)=>{
-        accHeight += acc.offsetHeight;
-      });
-      allPans.forEach((pan)=>{
-        accHeight += pan.offsetHeight;
-      });
-      console.log(accHeight);
-      return accHeight;
-    }
-
-
     // open first accordion
-    const activeTab = document.querySelector(".tab__accordion.is-active");
-    const activeAcc = document.querySelectorAll(".accordion__btn.active");
-    activeAcc.forEach((activeAcc)=>{
-      let panel = activeAcc.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
+    const activeTab = document.querySelectorAll(".accordion__wrap.is-active");
+    activeTab.forEach(acc => {
+      const panel = acc.querySelector(".accordion__panel")
+
+      if (acc.classList.contains('is-active')) {
+        panel.style.maxHeight = panel.children[0].scrollHeight + 40 + "px";
       } else {
-        panel.style.maxHeight = '100%';
+        panel.style.maxHeight = null;
       }
     })
-    activeTab.style.height = `${getAccHeight()}px`;
 
     // get open/close function to accordion
-    const accsBtn = document.querySelectorAll(".accordion__btn");
-    accsBtn.forEach(function(acc) {
-      acc.addEventListener("click", function() {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = '100%';
-        }
-        activeTab.style.height = `${getAccHeight()}px`;
-      });
-    })
-    window.addEventListener("resize", function () {
-      activeTab.style.height = `${getAccHeight()}px`; // check at resize
-    });
+    const accTab = document.querySelectorAll(".accordion__wrap")
+    accTab.forEach(acc => {
+      const btn = acc.querySelector(".accordion__btn")
+      btn.addEventListener('click', (el) => {
+        const elem = el.currentTarget.parentNode
+        const panel = elem.querySelector(".accordion__panel")
 
+        elem.classList.toggle('is-active');
+        if (elem.classList.contains('is-active')) {
+          panel.style.maxHeight = panel.scrollHeight + 40 + "px";
+        } else {
+          panel.style.maxHeight = null;
+        }
+      })
+    })
 
     // get author changing for accordion
-    document.querySelector('.tab__accordion-wrapper').addEventListener('click', function(event) {
-      if (event.target.className === "panel__link") {
-      if (event.target.textContent === "Доменико Гирландайо") {
-        document.querySelector(".card__pic").setAttribute("src", "./img/catalogue/catalogue-girlandayo.jpg");
-        document.querySelector(".card__pic").setAttribute("alt", "Доменико Гирландайо");
-        document.querySelector(".card__title").textContent = "Доменико Гирландайо";
-        document.querySelector(".card__date").textContent = "2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.";
-        document.querySelector(".card__text").innerHTML = "Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).";
-      } else {
-        document.querySelector(".card__pic").setAttribute("src", "./img/catalogue/catalogue-placeholder.jpg");
-        document.querySelector(".card__pic").setAttribute("alt", "Неизвестный художник");
-        document.querySelector(".card__title").textContent = "Что мы о нём знаем?";
-        document.querySelector(".card__date").textContent = "";
-        document.querySelector(".card__text").innerHTML = `Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!<br><a href="#gallery" class="link-placeholder">В галерею</a>`;
-      }
-    };
-    });
-  };
+    document.querySelectorAll('.panel__link').forEach(link => {
+      link.addEventListener('click', (event) => {
+        if (event.target.textContent === "Доменико Гирландайо") {
+          document.querySelector(".card__pic").setAttribute("src", "./img/catalogue/catalogue-girlandayo.jpg");
+          document.querySelector(".card__pic").setAttribute("alt", "Доменико Гирландайо");
+          document.querySelector(".card__title").textContent = "Доменико Гирландайо";
+          document.querySelector(".card__date").textContent = "2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.";
+          document.querySelector(".card__text").innerHTML = "Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).";
+        } else {
+          document.querySelector(".card__pic").setAttribute("src", "./img/catalogue/catalogue-placeholder.jpg");
+          document.querySelector(".card__pic").setAttribute("alt", "Неизвестный художник");
+          document.querySelector(".card__title").textContent = "Что мы о нём знаем?";
+          document.querySelector(".card__date").textContent = "";
+          document.querySelector(".card__text").innerHTML = `Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!<br><a href="#gallery" class="link-placeholder">В галерею</a>`;
+        }
+      });
+    })
+  }
   accordionInit();
 
   //events
@@ -260,6 +238,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     function activateMobileSlider(params) {
       const pagination = document.createElement("div");
+      pagination.classList.add("events__pagination");
       pagination.classList.add("swiper-pagination");
       pagination.classList.add(params.paginationClassName);
       params.cardsContainer.append(pagination);
@@ -283,7 +262,7 @@ window.addEventListener('DOMContentLoaded', function() {
               el.removeAttribute("role");
               el.removeAttribute("aria-label");
             });
-            let pagin = document.querySelectorAll(".swiper-pagination")
+            let pagin = document.querySelectorAll(".events__pagination")
             pagin.forEach((pagin) => {pagin.parentNode.removeChild(pagin)})
           }
         }
@@ -350,7 +329,94 @@ window.addEventListener('DOMContentLoaded', function() {
 
       checkWindowWidthMobile(sliderMobileParams); // check at resize
     });
-  };
+  }
   eventsInit();
+
+  // books
+  function booksInit(){
+    // init swiper
+    const swiperBooks = new Swiper(".books__swiper", {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+
+      navigation: {
+        nextEl: '.books-button-next',
+        prevEl: '.books-button-prev',
+      },
+      pagination: {
+        el: '.books-pagination',
+        type: 'fraction',
+      },
+
+      breakpoints: {
+        769: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 50,
+        },
+        1025: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 50,
+        }
+      },
+    })
+
+    // добавить разрушение на 576px
+
+
+  }
+  booksInit();
+
+    // projects
+    function projectsInit(){
+      // init swiper
+      const swiperProjects = new Swiper(".projects__swiper", {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        // width: 450,
+
+        navigation: {
+          nextEl: '.projects-button-next',
+          prevEl: '.projects-button-prev',
+        },
+
+        breakpoints: {
+          577: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 34,
+          },
+          769: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 50,
+          },
+          1025: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 50,
+          }
+        },
+      })
+
+      // tippy('#tip-1', {
+      //   content: 'Пример современных тенденций - современная методология разработки',
+      // });
+      // tippy('#tip-2', {
+      //   content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+      // });
+      // tippy('#tip-3', {
+      //   content: 'В стремлении повысить качество',
+      // });
+
+      // Set BG to dropdown items
+      // document.querySelectorAll('.projects__slide').forEach(function(thumb) {
+      //   thumb.style.backgroundImage=`url('./img/projects/${thumb.getAttribute("data-set")}.jpg')`;
+      // });
+
+    }
+    projectsInit();
 
 })
