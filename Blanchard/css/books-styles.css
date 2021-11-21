@@ -1,0 +1,216 @@
+.books {
+  background-image: url("../img/backgrounds/books-bg-1920.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+/* .books__container {
+} */
+.books__content {
+  display: flex;
+  padding: 88px 0 78px;
+  max-height: 763px;
+}
+
+.books__filter-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-right: 170px;
+}
+
+.books__heading {
+  max-width: 25%;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.books__checkwrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 27px;
+}
+
+.books__checkwrap-text {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2;
+  color: #fff;
+}
+
+.books__checkbox-label {
+  position: relative;
+  padding-left: 24px;
+}
+
+.books__checkbox-text {
+  font-size: 1rem;
+  line-height: 2;
+  color: #fff;
+}
+.books__checkbox-text:before {
+  --size: var(--checkbox-size);
+  content: "";
+  top: calc(50% - 0.5 * var(--size));
+  left: 0;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border: 1px solid #fff;
+}
+.books__checkbox-text:after {
+  --size: calc(0.3 * (var(--checkbox-size)));
+  content: "";
+  top: calc(50% - 0.5 * var(--size));
+  left: calc(0.5 * (var(--checkbox-size) - var(--size)));
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background-color: transparent;
+  border-radius: calc(0.5 * var(--size));
+}
+.books__checkbox:checked + .books__checkbox-text {
+  color: var(--theme-color-light);
+}
+.books__checkbox:checked + .books__checkbox-text:before {
+  border-color: var(--theme-color-light);
+}
+.books__checkbox:checked + .books__checkbox-text:after {
+  background-color: var(--theme-color-light);
+}
+
+/* .books__pricewrap {
+} */
+.books__pricewrap-caption {
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2;
+  color: #fff;
+}
+.books__price {
+  display: flex;
+  border: 1px solid #fff8;
+  border-radius: 6px;
+}
+.books__price-text {
+  padding: 0 10px;
+  font-size: 1rem;
+  line-height: 2.375;
+  color: #fff;
+}
+.books__price-input {
+  width: 73px;
+  border: none;
+  background-color: rgba(157, 92, 208, 0.5);
+}
+
+.books__swiper-container {
+  position: relative;
+  width: 72%;
+  padding-top: 85px;
+}
+.books__swiper {
+  position: static;
+  overflow-x: hidden;
+}
+/* .swiper {
+} */
+/* .books__swiper-wrapper {
+} */
+.books__book {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1rem;
+  line-height: 1.375;
+  color: #fff;
+}
+.book__image {
+  /* -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center; */
+  margin-bottom: 23px;
+}
+.book__textwrap {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+}
+.book__title {
+  font-weight: 700;
+}
+.book_price {
+  font-style: italic;
+  text-align: right;
+}
+.book__author {
+  margin-bottom: 16px;
+}
+.book__btn {
+  padding: 8px 20px;
+  border: 2px solid #9d5cd0;
+  border-radius: 100px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.books-navigation {
+  position: absolute;
+  top: 25px;
+  left: -9px;
+  width: 150px;
+  height: 30px;
+}
+.books-pagination {
+  position: absolute;
+  top: 0;
+
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.books-button-prev,
+.books-button-next {
+  position: absolute;
+  top: 0;
+
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #666;
+}
+.books-button-prev::after,
+.books-button-next::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.books-button-prev::after {
+  transform: rotate(135deg);
+}
+.books-button-next::after {
+  transform: rotate(-45deg);
+}
+.books-button-prev:hover,
+.books-button-next:hover {
+  background-color: var(--theme-color);
+}
+.books-button-prev:focus,
+.books-button-next:focus {
+  outline: 2px solid #000;
+}
+.books-button-prev:focus:active,
+.books-button-next:focus:active {
+  background-color: var(--theme-color-dark);
+  outline: 2px solid #000;
+}

@@ -162,6 +162,10 @@
   padding-bottom: 4px;
 }
 
+.header__nav {
+  margin-right: 13.38vw;
+}
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -170,23 +174,23 @@
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
   -ms-flex-line-pack: justify;
   align-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 
-  margin-right: 13.6vw;
+  min-width: 920px;
 }
 
 .nav__item {
   line-height: 1.8;
 }
 .nav__item:not(:last-child) {
-  margin-right: 2.38vw;
+  margin-right: 5%;
 }
 
 .nav__link,
@@ -249,6 +253,7 @@
 .header__logo-link {
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-right: 1%;
 
   outline: 2px solid transparent;
   outline-offset: 3px;
@@ -269,7 +274,11 @@
 .header__logo-link:focus:active {
   outline-color: var(--theme-color-light);
 }
-/* .logo {} .header__logo {} .nav {} .header__nav {} */
+
+.header__logo {
+  width: 100%;
+}
+/* .logo {}  .nav {}  */
 
 /* BOTTOM CONTAINER ELEMENTS */
 
@@ -281,9 +290,9 @@
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
 }
 
 .header__dropdown {
@@ -295,7 +304,7 @@
 
 .dropdown {
   position: relative;
-  font-size: 1em;
+  font-size: 1.125rem;
   line-height: 1.36;
 }
 
@@ -452,7 +461,7 @@
 }
 
 .dropdown__item {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 22px;
   background-repeat: no-repeat;
 }
@@ -596,7 +605,7 @@
   background-size: contain;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1480px) {
   .header__content_top {
     padding-bottom: 24px;
   }
@@ -630,14 +639,13 @@
     background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 0.2s ease;
-    -o-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
   }
   .is-active.header__menu {
     opacity: 1;
     visibility: visible;
   }
+
   .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -650,7 +658,7 @@
     margin-bottom: 144px;
     margin-left: -12px;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .nav__item:not(:last-child) {
     margin-right: 0;
@@ -663,7 +671,7 @@
     border-radius: 100px;
 
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 25px;
 
     outline: 2px solid transparent;
@@ -779,10 +787,10 @@
     transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
   }
 
-  .header__search-clicker.is-active {
+  .header__search-clicker.search-is-active {
     pointer-events: none;
   }
-  .header__search-clicker.is-active + .header__search {
+  .header__search-clicker.search-is-active + .header__search {
     position: absolute;
     top: 37px;
     right: var(--container-padding);
@@ -826,7 +834,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header__search-clicker.is-active + .header__search {
+  .header__search-clicker.search-is-active + .header__search {
     top: 0;
     right: 0;
 
@@ -877,7 +885,7 @@
   .nav__list {
     margin-bottom: 27px;
     margin-left: -10px;
-    font-size: 16px;
+    font-size: 1rem;
   }
   .nav__item:not(:last-child) {
     margin-right: 0;
@@ -886,7 +894,7 @@
 
   .header__log {
     padding: 10px 30px;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 16px;
   }
   .log-svg {
@@ -909,7 +917,7 @@
     margin-bottom: 6px;
   }
 
-  .header__search-clicker.is-active + .header__search {
+  .header__search-clicker.search-is-active + .header__search {
     top: 0;
     right: 0;
     -webkit-box-pack: center;
@@ -919,11 +927,11 @@
     width: 100vw;
     padding: 40px 64px 19px 57px;
 
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .search__input {
     min-width: 88%;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin-right: 0;
   }
   .search__btn {

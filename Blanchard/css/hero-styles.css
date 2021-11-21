@@ -26,14 +26,14 @@
 .hero__heading {
   margin-bottom: 19px;
   font-weight: 700;
-  font-size: 72px;
+  font-size: 4.5rem;
   line-height: 1.16;
   color: #fff;
 }
 .hero__descr {
   margin-bottom: 92px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.67;
 }
 
@@ -44,8 +44,8 @@
   border: 3px solid var(--theme-color);
   border-radius: 100px;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.667;
   outline: 2px solid transparent;
   outline-offset: 3px;
   background-color: var(--theme-color);
@@ -135,7 +135,7 @@
 }
 
 .about__descr {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 2;
 }
 
@@ -150,7 +150,7 @@
     background-image: url("../img/backgrounds/hero-bg3-1024.jpg");
   }
   .hero__content {
-    padding: 212px 0 114px;
+    padding: 212px 0 113px;
     max-width: 660px;
   }
   .hero__heading {
@@ -184,7 +184,7 @@
   }
   .hero__descr {
     margin-bottom: 134px;
-    font-size: 2.35vw;
+    font-size: 1.125rem;
   }
 }
 
@@ -194,19 +194,23 @@
     max-width: 660px;
   }
   .hero__heading {
-    font-size: 10vw;
+    font-size: 2rem;
+    line-height: 1.15625;
+    text-align: center;
   }
   .hero__descr {
-    margin-bottom: 134px;
-    font-size: 3.75vw;
+    margin-bottom: 44px;
+    font-size: 0.75rem;
+    line-height: 1.33;
+    text-align: center;
   }
   .hero__btn {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
     padding: 10px 15px 12px;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 0.75rem;
+    line-height: 1;
   }
 
   .swiper-bg_1 {
@@ -226,22 +230,6 @@
     padding: 78px 10px 44px;
     max-width: 290px;
   }
-  .hero__heading {
-    font-size: 32px;
-    line-height: 37px;
-    text-align: center;
-  }
-  .hero__descr {
-    margin-bottom: 44px;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-  }
-  .hero__btn {
-    padding: 10px 15px 12px;
-    font-size: 12px;
-    line-height: 12px;
-  }
 
   .about__content {
     padding: 56px 0 41px;
@@ -250,7 +238,7 @@
     margin-bottom: 16px;
   }
   .about__descr {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 

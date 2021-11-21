@@ -4,6 +4,8 @@
 @import url("gallery-styles.css");
 @import url("catalogue-styles.css");
 @import url("events-styles.css");
+@import url("books-styles.css");
+@import url("projects-styles.css");
 
 @font-face {
   font-family: "OpenSans";
@@ -47,6 +49,7 @@
   --theme-color-light-outline: #d1a9f0;
   --theme-color-light: #c283f3;
   --theme-color-dark: #7943a4;
+  --checkbox-size: 12px;
 }
 
 @media screen and (max-width: 576px) {
