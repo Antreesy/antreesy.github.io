@@ -559,7 +559,7 @@ window.addEventListener('DOMContentLoaded', function() {
   
         var myPlacemark = new ymaps.Placemark([55.75846806898367,37.60108849999989], {}, {
           iconLayout: 'default#image',
-          iconImageHref: '/img/marker.svg',
+          iconImageHref: '../img/marker.svg',
           iconImageSize: [20, 20],
           // iconImageOffset: [-3, -42]
         })
