@@ -192,6 +192,7 @@ padding: 0;
   width: 70px;
 }
 .book__author {
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
