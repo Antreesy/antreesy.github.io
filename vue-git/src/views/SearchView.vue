@@ -10,7 +10,7 @@ const tableData = computed(() => store.getters.TABLE_DATA);
 
 <template>
   <div class="wrapper">
-    <SearchBar :isDisabled="false" />
+    <SearchBar />
     <Table :propKeys="tableKeys" :propData="tableData" />
   </div>
 </template>
