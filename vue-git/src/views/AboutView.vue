@@ -12,7 +12,7 @@ const libraries = computed(() => store.getters.LIBRARIES);
 <template>
   <div>
     <div class="about-wrapper">
-      <SearchBar :isDisabled="true" />
+      <SearchBar />
       <Table :propKeys="tableKeys" :propData="mockData" />
       <div class="wrapper__hints">
         <button class="hints-button input-hint">
