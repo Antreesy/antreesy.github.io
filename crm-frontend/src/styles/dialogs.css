@@ -1,0 +1,229 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: rgba(51, 51, 51, 0.6);
+
+    opacity: 0;
+    visibility: hidden;
+}
+.modal.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 22px 30px 25px;
+    width: 450px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.dialog-delete-window {
+    min-height: 215px;
+}
+
+.dialog-edit-window {
+    min-height: 396px;
+}
+
+.dialog-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialog__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.dialog-caption {
+    margin: 0;
+    margin-bottom: 11px;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--color-black);
+}
+
+.dialog-edit-window .dialog-caption {
+    align-self: flex-start;
+    margin-bottom: 32px;
+}
+
+.dialog-text {
+    margin: 0;
+    margin-bottom: 25px;
+    width: 60%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--color-black);
+}
+
+.form__input {
+    width: 100%;
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    border: none;
+    border-bottom: 1px solid #C8C5D1;
+    color: var(--color-black);
+    background-color: transparent;
+}
+.form__input:focus {
+    outline: none;
+}
+
+.form__label {
+    position: relative;
+    width: 100%;
+}
+.form__label-wrapper {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+}
+.form__label-wrapper.is-focused {
+    font-size: 10px;
+    line-height: 14px;
+    transform: translate(0, -14px);
+}
+.form__label-span {
+    color: var(--color-txt);
+}
+.form__label-span.is-required {
+    color: var(--color-pink);
+}
+
+.dialog-confirm-button {
+    margin-bottom: 5px;
+    width: 130px;
+    height: 44px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #9873FF;
+    border: none;
+}
+
+.dialog-cancel-button {
+    font-size: 12px;
+line-height: 16px;
+text-align: center;
+text-decoration-line: underline;
+border: none;
+background-color: transparent;
+color: var(--color-black);
+}
+
+.dialog-exit-button {
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    width: 29px;
+    height: 29px;
+    padding: 6px;
+    background-color: transparent;
+    border: none;
+}
+
+.dialog-exit-button::before,
+.dialog-exit-button::after {
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 14%;
+    content: '';
+    width: 20.5px;
+    height: 1.4px;
+    background-color: #C8C5D1;
+}
+
+.dialog-exit-button::before {
+    transform: rotate(135deg);
+}
+
+.dialog-exit-button::after {
+    transform: rotate(45deg);
+}
+
+.dialog__select-wrapper {
+    width: calc(100% + 60px);
+    padding: 0 30px;
+    background-color: var(--color-grey-03);
+}
+
+.select__item-wrapper {
+    display: flex;
+    border: 1px solid var(--color-grey)
+    /* background-color: var(--color-grey); */
+}
+
+
+.select__wrapper {
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+    border: 1px solid var(--color-grey)
+}
+
+.select__preview {
+    position: relative;
+    width: 123px;
+    padding: 10px 12px;
+    background-color: #E7E5EB;
+    text-align: start;
+}
+
+.select__preview::after {
+    position: absolute;
+    top: calc(50% - 6px);
+    right: 6px;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-right: 1px solid var(--color-pink);
+    border-bottom: 1px solid var(--color-pink);
+    transform: rotate(45deg);
+}
+
+.select__dropdown {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    list-style-type: none;
+    padding: 0;
+    background-color: #F4F3F6;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.select__dropdown.is-open {
+    opacity: 1;
+    visibility: visible;  
+}
+
+.select__item-btn {
+    width: 123px;
+    padding: 10px 12px;
+    text-align: start;
+}
+
+.select__item-btn:hover {
+    background-color: #E7E5EB;
+}
+
+.select__input {
+    margin-bottom: 0;
+}
