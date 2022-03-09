@@ -60,15 +60,24 @@
               </ul>
             </nav>
 
-            <a class="link header__log" href="">
-              <svg class="log-svg" width="13" height="13" viewbox="0 0 13 13" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path class="log-path"
-                  d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                  fill="white" />
-              </svg>
-              Войти
-            </a>
+            <div class="nav__actions-wrapper">
+              <a class="link header__log" href="">
+                <svg class="log-svg" width="13" height="13" viewbox="0 0 13 13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="log-path"
+                    d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                    fill="white" />
+                </svg>
+                Войти
+              </a>
+
+              <div class="nav__lang-wrapper">
+                <a class="link nav__link nav__link-lang" href="./index-en.html">EN</a>
+                /
+                <a class="link nav__link nav__link-lang is-active" href="./index.html">RU</a>
+              </div>
+            </div>
+
           </div>
 
           <a class="link header__logo-link">
@@ -218,10 +227,10 @@
           <label class="gallery__filter">
             <span class="gallery__filter-text">Фильтр</span>
             <select class="gallery__select" name="gallery__select" id="gallery__select">
+              <option value="all">Все</option>
               <option value="1">Живопись</option>
               <option value="2">Рисунок</option>
               <option value="3">Скульптура</option>
-              <option value="all">Все</option>
             </select>
           </label>
           <p class="text gallery__text">Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний
@@ -237,7 +246,7 @@
                 <div class="gallery-button-next swiper-button-next"></div>
               </div>
               <div class="swiper-wrapper gallery__swiper-wrapper">
-                <button class="swiper-slide gallery__slide" data-set="1">
+                <button class="swiper-slide gallery__slide" data-set="1" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/1.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/1.jpg">
@@ -249,7 +258,7 @@
                     <img class="gallery__image" src="./img/gallery/320/1.jpg" loading="lazy" alt="Картина 1">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="2">
+                <button class="swiper-slide gallery__slide" data-set="2" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/2.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/2.jpg">
@@ -261,7 +270,7 @@
                     <img class="gallery__image" src="./img/gallery/320/2.jpg" loading="lazy" alt="Картина 2">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="3">
+                <button class="swiper-slide gallery__slide" data-set="3" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/3.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/3.jpg">
@@ -273,7 +282,7 @@
                     <img class="gallery__image" src="./img/gallery/320/3.jpg" loading="lazy" alt="Картина 3">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="4">
+                <button class="swiper-slide gallery__slide" data-set="4" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/4.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/4.jpg">
@@ -285,7 +294,7 @@
                     <img class="gallery__image" src="./img/gallery/320/4.jpg" loading="lazy" alt="Картина 4">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="5">
+                <button class="swiper-slide gallery__slide" data-set="5" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/5.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/5.jpg">
@@ -297,7 +306,7 @@
                     <img class="gallery__image" src="./img/gallery/320/5.jpg" loading="lazy" alt="Картина 5">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="6">
+                <button class="swiper-slide gallery__slide" data-set="6" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/6.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/6.jpg">
@@ -309,7 +318,7 @@
                     <img class="gallery__image" src="./img/gallery/320/6.jpg" loading="lazy" alt="Картина 6">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="7">
+                <button class="swiper-slide gallery__slide" data-set="7" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/7.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/7.jpg">
@@ -321,7 +330,7 @@
                     <img class="gallery__image" src="./img/gallery/320/7.jpg" loading="lazy" alt="Картина 7">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="8">
+                <button class="swiper-slide gallery__slide" data-set="8" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/8.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/8.jpg">
@@ -333,7 +342,7 @@
                     <img class="gallery__image" src="./img/gallery/320/8.jpg" loading="lazy" alt="Картина 8">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="9">
+                <button class="swiper-slide gallery__slide" data-set="9" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/9.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/9.jpg">
@@ -345,7 +354,7 @@
                     <img class="gallery__image" src="./img/gallery/320/9.jpg" loading="lazy" alt="Картина 9">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="10">
+                <button class="swiper-slide gallery__slide" data-set="10" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/10.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/10.jpg">
@@ -357,7 +366,7 @@
                     <img class="gallery__image" src="./img/gallery/320/10.jpg" loading="lazy" alt="Картина 10">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="11">
+                <button class="swiper-slide gallery__slide" data-set="11" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/11.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/11.jpg">
@@ -369,7 +378,7 @@
                     <img class="gallery__image" src="./img/gallery/320/11.jpg" loading="lazy" alt="Картина 11">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="12">
+                <button class="swiper-slide gallery__slide" data-set="12" data-filter="1">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/12.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/12.jpg">
@@ -381,7 +390,7 @@
                     <img class="gallery__image" src="./img/gallery/320/12.jpg" loading="lazy" alt="Картина 12">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="13">
+                <button class="swiper-slide gallery__slide" data-set="13" data-filter="2">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/13.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/13.jpg">
@@ -393,7 +402,7 @@
                     <img class="gallery__image" src="./img/gallery/320/13.jpg" loading="lazy" alt="Картина 13">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="14">
+                <button class="swiper-slide gallery__slide" data-set="14" data-filter="2">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/14.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/14.jpg">
@@ -405,7 +414,7 @@
                     <img class="gallery__image" src="./img/gallery/320/14.jpg" loading="lazy" alt="Картина 14">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="15">
+                <button class="swiper-slide gallery__slide" data-set="15" data-filter="2">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/15.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/15.jpg">
@@ -417,7 +426,7 @@
                     <img class="gallery__image" src="./img/gallery/320/15.jpg" loading="lazy" alt="Картина 15">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="16">
+                <button class="swiper-slide gallery__slide" data-set="16" data-filter="2">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/16.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/16.jpg">
@@ -429,7 +438,7 @@
                     <img class="gallery__image" src="./img/gallery/320/16.jpg" loading="lazy" alt="Картина 16">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="17">
+                <button class="swiper-slide gallery__slide" data-set="17" data-filter="2">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/17.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/17.jpg">
@@ -441,7 +450,7 @@
                     <img class="gallery__image" src="./img/gallery/320/17.jpg" loading="lazy" alt="Картина 17">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="18">
+                <button class="swiper-slide gallery__slide" data-set="18" data-filter="2">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/18.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/18.jpg">
@@ -453,7 +462,7 @@
                     <img class="gallery__image" src="./img/gallery/320/18.jpg" loading="lazy" alt="Картина 18">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="19">
+                <button class="swiper-slide gallery__slide" data-set="19" data-filter="3">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/19.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/19.jpg">
@@ -465,7 +474,7 @@
                     <img class="gallery__image" src="./img/gallery/320/19.jpg" loading="lazy" alt="Картина 19">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="20">
+                <button class="swiper-slide gallery__slide" data-set="20" data-filter="3">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/20.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/20.jpg">
@@ -477,7 +486,7 @@
                     <img class="gallery__image" src="./img/gallery/320/20.jpg" loading="lazy" alt="Картина 20">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="21">
+                <button class="swiper-slide gallery__slide" data-set="21" data-filter="3">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/21.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/21.jpg">
@@ -489,7 +498,7 @@
                     <img class="gallery__image" src="./img/gallery/320/21.jpg" loading="lazy" alt="Картина 21">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="22">
+                <button class="swiper-slide gallery__slide" data-set="22" data-filter="3">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/22.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/22.jpg">
@@ -501,7 +510,7 @@
                     <img class="gallery__image" src="./img/gallery/320/22.jpg" loading="lazy" alt="Картина 22">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="23">
+                <button class="swiper-slide gallery__slide" data-set="23" data-filter="3">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/23.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/23.jpg">
@@ -513,7 +522,7 @@
                     <img class="gallery__image" src="./img/gallery/320/23.jpg" loading="lazy" alt="Картина 23">
                   </picture>
                 </button>
-                <button class="swiper-slide gallery__slide" data-set="24">
+                <button class="swiper-slide gallery__slide" data-set="24" data-filter="3">
                   <picture>
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/24.webp" type="image/webp">
                     <source media="(min-width: 1025px)" srcset="./img/gallery/1920/24.jpg">
@@ -778,14 +787,15 @@
     <section class="catalogue" id="catalogue">
       <div class="container catalogue__container">
         <div class="content catalogue__content">
-          <h2 class="heading catalogue__heading">Каталог</h2>
-          <div class="flags-wrapper">
-            <button class="flag flag_fr" data-set="fr" data-num="0" aria-label="Франция"></button>
-            <button class="flag flag_de" data-set="de" data-num="1" aria-label="Германия"></button>
-            <button class="flag flag_it is-active" data-set="it" data-num="2" aria-label="Италия"></button>
-            <button class="flag flag_ru" data-set="ru" data-num="3" aria-label="Россия"></button>
-            <button class="flag flag_be" data-set="be" data-num="4" aria-label="Бельгия"></button>
-
+          <div class="catalogue__heading-content">
+            <h2 class="heading catalogue__heading">Каталог</h2>
+            <div class="flags-wrapper">
+              <button class="flag flag_fr" data-set="fr" data-num="0" aria-label="Франция"></button>
+              <button class="flag flag_de" data-set="de" data-num="1" aria-label="Германия"></button>
+              <button class="flag flag_it is-active" data-set="it" data-num="2" aria-label="Италия"></button>
+              <button class="flag flag_ru" data-set="ru" data-num="3" aria-label="Россия"></button>
+              <button class="flag flag_be" data-set="be" data-num="4" aria-label="Бельгия"></button>
+            </div>
           </div>
           <div class="catalogue__tabs-container">
             <div class="tab catalogue__tab" data-target="fr">

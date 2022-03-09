@@ -173,6 +173,9 @@
   cursor: pointer;
 
 }
+.gallery__slide.not-selected {
+  display: none;
+}
 /* .gallery__image {
 } */
 .gallery__slide::before,
@@ -307,9 +310,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -331,6 +332,9 @@
   transition: opacity 0.2s ease;
 }
 .modal.is-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   visibility: visible;
   opacity: 1;
 }

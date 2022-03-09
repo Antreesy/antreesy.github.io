@@ -6,14 +6,14 @@
   position: relative;
   padding: 89px 0 50px;
 }
+.catalogue__heading-content {
+  display: flex;
+}
 .catalogue__heading {
+  margin-right: 10px;
   margin-bottom: 24px;
 }
 .flags-wrapper {
-  position: absolute;
-  top: 92px;
-  left: 222px;
-
   display: -webkit-box;
 
   display: -ms-flexbox;
@@ -439,10 +439,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .flags-wrapper {
-    top: 99px;
-    left: 224px;
-  }
   .tab__card {
     width: 47.29%;
     margin-right: 5.41%;
@@ -459,11 +455,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .flags-wrapper {
-    top: 91px;
-    left: auto;
-    right: 0px;
-  }
   .flag {
     margin-right: calc((13 / 64) * 100vw - 102px);
   }
@@ -511,6 +502,7 @@
     padding: 56px 0 30px;
   }
   .flags-wrapper {
+    position: absolute;
     top: 98px;
     left: 0px;
     right: 0px;

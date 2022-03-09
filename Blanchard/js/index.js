@@ -159,14 +159,94 @@ window.addEventListener("DOMContentLoaded", function() {
     });
 
     // init choices
-    const choices = new Choices(document.querySelector("#gallery__select"), {
+    const selector = document.querySelector("#gallery__select")
+    const choices = new Choices(selector, {
       searchEnabled: false,
       itemSelectText: "",
     });
 
+    const slides1 = [
+      '<button class="swiper-slide gallery__slide" data-set="1" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/1.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/1.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/1.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/1.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/1.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/1.jpg"><source srcset="./img/gallery/320/1.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/1.jpg" loading="lazy" alt="Картина 1"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="2" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/2.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/2.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/2.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/2.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/2.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/2.jpg"><source srcset="./img/gallery/320/2.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/2.jpg" loading="lazy" alt="Картина 2"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="3" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/3.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/3.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/3.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/3.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/3.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/3.jpg"><source srcset="./img/gallery/320/3.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/3.jpg" loading="lazy" alt="Картина 3"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="4" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/4.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/4.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/4.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/4.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/4.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/4.jpg"><source srcset="./img/gallery/320/4.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/4.jpg" loading="lazy" alt="Картина 4"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="5" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/5.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/5.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/5.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/5.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/5.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/5.jpg"><source srcset="./img/gallery/320/5.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/5.jpg" loading="lazy" alt="Картина 5"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="6" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/6.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/6.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/6.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/6.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/6.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/6.jpg"><source srcset="./img/gallery/320/6.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/6.jpg" loading="lazy" alt="Картина 6"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="7" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/7.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/7.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/7.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/7.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/7.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/7.jpg"><source srcset="./img/gallery/320/7.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/7.jpg" loading="lazy" alt="Картина 7"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="8" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/8.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/8.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/8.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/8.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/8.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/8.jpg"><source srcset="./img/gallery/320/8.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/8.jpg" loading="lazy" alt="Картина 8"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="9" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/9.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/9.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/9.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/9.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/9.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/9.jpg"><source srcset="./img/gallery/320/9.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/9.jpg" loading="lazy" alt="Картина 9"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="10" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/10.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/10.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/10.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/10.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/10.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/10.jpg"><source srcset="./img/gallery/320/10.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/10.jpg" loading="lazy" alt="Картина 10"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="11" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/11.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/11.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/11.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/11.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/11.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/11.jpg"><source srcset="./img/gallery/320/11.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/11.jpg" loading="lazy" alt="Картина 11"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="12" data-filter="1"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/12.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/12.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/12.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/12.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/12.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/12.jpg"><source srcset="./img/gallery/320/12.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/12.jpg" loading="lazy" alt="Картина 12"></picture></button>',
+    ]
+
+    const slides2 = [
+      '<button class="swiper-slide gallery__slide" data-set="13" data-filter="2"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/13.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/13.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/13.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/13.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/13.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/13.jpg"><source srcset="./img/gallery/320/13.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/13.jpg" loading="lazy" alt="Картина 13"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="14" data-filter="2"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/14.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/14.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/14.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/14.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/14.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/14.jpg"><source srcset="./img/gallery/320/14.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/14.jpg" loading="lazy" alt="Картина 14"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="15" data-filter="2"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/15.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/15.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/15.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/15.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/15.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/15.jpg"><source srcset="./img/gallery/320/15.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/15.jpg" loading="lazy" alt="Картина 15"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="16" data-filter="2"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/16.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/16.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/16.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/16.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/16.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/16.jpg"><source srcset="./img/gallery/320/16.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/16.jpg" loading="lazy" alt="Картина 16"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="17" data-filter="2"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/17.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/17.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/17.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/17.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/17.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/17.jpg"><source srcset="./img/gallery/320/17.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/17.jpg" loading="lazy" alt="Картина 17"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="18" data-filter="2"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/18.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/18.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/18.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/18.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/18.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/18.jpg"><source srcset="./img/gallery/320/18.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/18.jpg" loading="lazy" alt="Картина 18"></picture></button>',
+    ]
+
+    const slides3 = [
+      '<button class="swiper-slide gallery__slide" data-set="19" data-filter="3"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/19.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/19.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/19.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/19.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/19.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/19.jpg"><source srcset="./img/gallery/320/19.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/19.jpg" loading="lazy" alt="Картина 19"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="20" data-filter="3"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/20.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/20.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/20.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/20.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/20.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/20.jpg"><source srcset="./img/gallery/320/20.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/20.jpg" loading="lazy" alt="Картина 20"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="21" data-filter="3"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/21.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/21.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/21.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/21.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/21.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/21.jpg"><source srcset="./img/gallery/320/21.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/21.jpg" loading="lazy" alt="Картина 21"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="22" data-filter="3"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/22.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/22.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/22.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/22.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/22.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/22.jpg"><source srcset="./img/gallery/320/22.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/22.jpg" loading="lazy" alt="Картина 22"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="23" data-filter="3"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/23.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/23.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/23.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/23.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/23.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/23.jpg"><source srcset="./img/gallery/320/23.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/23.jpg" loading="lazy" alt="Картина 23"></picture></button>',
+      '<button class="swiper-slide gallery__slide" data-set="24" data-filter="3"><picture><source media="(min-width: 1025px)" srcset="./img/gallery/1920/24.webp" type="image/webp"><source media="(min-width: 1025px)" srcset="./img/gallery/1920/24.jpg"><source media="(min-width: 769px)" srcset="./img/gallery/1024/24.webp" type="image/webp"><source media="(min-width: 769px)" srcset="./img/gallery/1024/24.jpg"><source media="(min-width: 441px)" srcset="./img/gallery/768/24.webp" type="image/webp"><source media="(min-width: 441px)" srcset="./img/gallery/768/24.jpg"><source srcset="./img/gallery/320/24.webp" type="image/webp"><img class="gallery__image" src="./img/gallery/320/24.jpg" loading="lazy" alt="Картина 24"></picture></button>',
+    ]
+    
+
+    selector.addEventListener(
+      'addItem',
+      function(event) {
+        if (event.detail.value === "all") {
+          swiperGallery.removeAllSlides();
+          swiperGallery.appendSlide(slides1);
+          swiperGallery.appendSlide(slides2);
+          swiperGallery.appendSlide(slides3);
+          modalBtns = document.querySelectorAll(".gallery__slide");
+          modalBtns.forEach((elem) => {
+            elem.addEventListener("click", activateModal);
+          });
+        }
+
+        if (event.detail.value === "1") {
+          swiperGallery.removeAllSlides();
+          swiperGallery.appendSlide(slides1);
+          modalBtns = document.querySelectorAll(".gallery__slide");
+          modalBtns.forEach((elem) => {
+            elem.addEventListener("click", activateModal);
+          });
+        }
+
+        if (event.detail.value === "2") {
+          swiperGallery.removeAllSlides();
+          swiperGallery.appendSlide(slides2);
+          modalBtns = document.querySelectorAll(".gallery__slide");
+          modalBtns.forEach((elem) => {
+            elem.addEventListener("click", activateModal);
+          });
+        }
+
+        if (event.detail.value === "3") {
+          swiperGallery.removeAllSlides();
+          swiperGallery.appendSlide(slides3);
+          modalBtns = document.querySelectorAll(".gallery__slide");
+          modalBtns.forEach((elem) => {
+            elem.addEventListener("click", activateModal);
+          });
+        }
+
+      },
+      false,
+    );
+
     // init modals
     const modal = document.querySelector(".gallery__modal");
-    const modalBtns = document.querySelectorAll(".gallery__slide");
+    let modalBtns = document.querySelectorAll(".gallery__slide");
     const modalWindows = document.querySelectorAll(".window");
     function closeModal() {
       modal.classList.remove("is-active");
@@ -174,22 +254,24 @@ window.addEventListener("DOMContentLoaded", function() {
       modalWindows.forEach((win) => { win.classList.remove("is-active"); });
     }
 
-    modalBtns.forEach((elem) => {
-      elem.addEventListener("click", (el) => {
-        const path = el.currentTarget.getAttribute("data-set");
+    function activateModal(el) {
+      const path = el.currentTarget.getAttribute("data-set");
 
-        modalWindows.forEach((win) => {
-          const closer = win.querySelector(".window__close");
+      modalWindows.forEach((win) => {
+        const closer = win.querySelector(".window__close");
 
-          if (win.getAttribute("data-target") == path) {win.classList.add("is-active");}
-          else {win.classList.remove("is-active");}
+        if (win.getAttribute("data-target") == path) {win.classList.add("is-active");}
+        else {win.classList.remove("is-active");}
 
-          closer.addEventListener("click", closeModal);
-        });
-
-        modal.classList.add("is-active");
-        document.body.style.overflow = "hidden";
+        closer.addEventListener("click", closeModal);
       });
+
+      modal.classList.add("is-active");
+      document.body.style.overflow = "hidden";
+    }
+
+    modalBtns.forEach((elem) => {
+      elem.addEventListener("click", activateModal);
     });
 
     modal.addEventListener("click", (el) => {

@@ -163,6 +163,7 @@
   background-position: 50% 50%;
   border: 1px solid;
   border-color: #CACACA;
+  outline: 1px solid #CACACA;
   -webkit-transition: border-color 0.2s ease;
   -o-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -189,9 +190,9 @@
   border-color: var(--theme-color);
   outline: none;
 }
-.projects__partners-link:hover {
+/* .projects__partners-link:hover {
   border-color: #fff;
-}
+} */
 .projects__partners-link:hover .projects__partners-img {
   opacity: 1;
   -webkit-filter: grayscale(0);
