@@ -546,7 +546,6 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
 }
 
 .section-pros__item {
@@ -566,7 +565,7 @@ img {
 }
 
 .section-pros__item:last-child {
-  margin: 0;
+  margin-right: 0;
 }
 
 .section-pros__text {
@@ -813,7 +812,7 @@ img {
 }
 
 .form__input_date {
-  width: 148px;
+  width: 168px;
   font-size: 16px;
   flex-grow: 0;
 }

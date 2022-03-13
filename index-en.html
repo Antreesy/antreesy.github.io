@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi! It's my portfolio</title>
+  <link rel="stylesheet" href="./src/styles/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./src/styles/pagescroll.css">
+  <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="content">
+        <nav class="nav header__nav">
+          <ul class="list nav__list">
+            <li class="nav__item">
+              <a id="hero-link" class="link nav__link" href="#hero">About</a>
+            </li>
+            <li class="nav__item">
+              <a id="skills-link" class="link nav__link" href="#skills">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a id="projects-link" class="link nav__link" href="#projects">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a id="contacts-link" class="link nav__link" href="#contacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="lang-wrapper">
+          <a class="link lang-wrapper__link is-active" href="./index-en.html">EN</a>
+          <a class="link lang-wrapper__link" href="./index.html">RU</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div id="pagescroll">
+
+      <section id="hero" class="section">
+        <div class="container">
+
+          <div class="codebox">
+            <div class="mb-3">
+              <p class="codebox__text">
+                <span class="codebox__text-blue">seeMyWork:</span>
+                <span class="codebox__text-white">{</span>
+              </p>
+              <p class="codebox__text">
+                &nbsp;&nbsp;&nbsp;&nbsp;languages: [
+                <span class="codebox__text-brown">'English'</span>, 
+                <span class="codebox__text-brown">'Russian'</span>, 
+                <span class="codebox__text-grey">'Deutsch'</span>],
+              </p>
+              <p class="codebox__text">
+                &nbsp;&nbsp;&nbsp;&nbsp;myRepository: url(
+                <a class="codebox__text-brown" href="https://github.com/Antreesy/antreesy.github.io/tree/main/projects" target="_blank">'antreesy.github.io/projects'</a>),
+              </p>
+              <p class="codebox__text mb-3" >
+                <span class="codebox__text-white">};</span>
+              </p>
+            </div>
+
+            <div class="mb-3">
+              <p class="codebox__text">
+                <span class="codebox__text-blue">myCompetencies:</span>
+                <span class="codebox__text-white">{</span>
+              </p>
+              <p class="codebox__text">
+                &nbsp;&nbsp;&nbsp;&nbsp;webLanguages: [
+                <span class="codebox__text-brown">'HTML'</span>, 
+                <span class="codebox__text-brown">'CSS3'</span>, 
+                <span class="codebox__text-brown">'Javascript'</span>],
+              </p>
+              <p class="codebox__text">
+                &nbsp;&nbsp;&nbsp;&nbsp;javascriptTools: [
+                <span class="codebox__text-brown">'Typescript'</span>, 
+                <span class="codebox__text-brown">'React.js'</span>, 
+                <span class="codebox__text-brown">'Material UI'</span>],
+              </p>
+              <p class="codebox__text">
+                <span class="codebox__text-white">};</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="greeting">
+            <h1 class="h1 greeting__caption">Welcome to my workspace!</h1>
+            <h1 class="h2 greeting__caption">I am Maksim,</h1>
+            <h1 class="h2 greeting__caption">Frontend-developer</h1>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container skillbox-wrapper">
+          <div class="skillbox skillbox-first mb-4">
+            <h2 class="h2 offset-md-2 mb-4 skillbox__caption">Good at:</h2>
+            <ul class="list skillbox__list">
+              <li class="skillbox__item col-4 mb-4">
+                <div class="skill">
+                  <img src="./src/img/skill-icons/html.svg" alt="html" class="skill__img">
+                  <span class="skill__caption">HTML 5</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/css.svg" alt="css" class="skill__img">
+                  <span class="skill__caption">CSS 3</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/js.svg" alt="js" class="skill__img">
+                  <span class="skill__caption">JAVASCRIPT</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/bootstrap.svg" alt="bootstrap" class="skill__img">
+                  <span class="skill__caption">BOOTSTRAP</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/git.svg" alt="git" class="skill__img">
+                  <span class="skill__caption">GIT</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/figma.svg" alt="figma" class="skill__img">
+                  <span class="skill__caption">FIGMA</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="skillbox skillbox-second">
+            <h2 class="h2 offset-md-2 mb-4 skillbox__caption">Learning now:</h2>
+            <ul class="list skillbox__list">
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/ts.svg" alt="ts" class="skill__img">
+                  <span class="skill__caption">TYPESCRIPT</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/react.svg" alt="react" class="skill__img">
+                  <span class="skill__caption">REACT . JS</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                <div class="skill">
+                  <img src="./src/img/skill-icons/material-ui.svg" alt="material-ui" class="skill__img">
+                  <span class="skill__caption">MATERIAL UI</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/vue.svg" alt="vue" class="skill__img">
+                  <span class="skill__caption">VUE . JS</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                <div class="skill">
+                  <img src="./src/img/skill-icons/gulp.svg" alt="gulp" class="skill__img">
+                  <span class="skill__caption">GULP</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                <div class="skill">
+                  <img src="./src/img/skill-icons/sass.svg" alt="sass" class="skill__img">
+                  <span class="skill__caption">SASS</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h3 class="h3 mb-3 projects-caption text-center">Portfolio is in progress now. Let's add your project!</h5>
+          <div class="projects-content">
+            <div id="swiper-layout" class="swiper">
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./src/img/lagoona-preview.jpg" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">"Lagoona"</h5>
+                      <p class="card-text">Hotel service landing page. UI-design, stylization of forms</p>
+                      <a href="./projects/Lagoona/index-en.html" target="_blank" class="btn btn-primary">Go to project</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./src/img/euclid-preview.jpg" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">"Euclid"</h5>
+                      <p class="card-text">Design agency landing page. Interactive menu, tabs, accordion</p>
+                      <a href="./projects/Euclid/index-en.html" target="_blank" class="btn btn-primary">Go to project</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./src/img/blanchard-preview.jpg" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">"Blanchard"</h5>
+                      <p class="card-text">Creative gallery landing page. Dropdowns, sliders, navigation, API, forms</p>
+                      <a href="./projects/Blanchard/index-en.html" target="_blank" class="btn btn-primary">Go to project</a>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+    
+              <div class="swiper-pagination"></div>
+            </div>
+            <div id="swiper-js" class="swiper">
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./src/img/pairs-preview.jpg" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">"Find The Pair" Game</h5>
+                      <p class="card-text">Clean Javascript game. Bootstrap, objects, listeners</p>
+                      <a href="./projects/Pairs/index-en.html" target="_blank" class="btn btn-warning">Go to project</a>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+    
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section">
+        <div class="container">
+
+          <div class="codebox">
+            <div class="mb-3">
+              <p class="codebox__text">
+                <span class="codebox__text-blue">class</span>
+                <span class="codebox__text-white">ContactLinks {</span>
+              </p>
+              <p class="codebox__text">&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="codebox__text-blue">public</span>
+                <span class="codebox__text-white">myRepository = url(</span>
+                <a class="codebox__text-brown" href="https://github.com/Antreesy/antreesy.github.io/tree/main/projects" target="_blank">'antreesy.github.io/projects'</a>),
+              </p>
+            </div>
+
+            <div class="mb-3">
+              <p class="codebox__text">&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="codebox__text-blue">contactMe</span><span class="codebox__text-white">(&nbsp;)&nbsp;&nbsp;{</span>
+              </p>
+              <p class="codebox__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="codebox__text-blue">const</span> sendEmail =
+                <a class="codebox__text-brown" href="mailto:antreesy.web@gmail.com">'antreesy.web@gmail.com'</a> ||
+                <a class="codebox__text-brown" href="mailto:sukharev.ma@yandex.ru">'sukharev.ma@yandex.ru'</a> ;
+              </p>
+              <p class="codebox__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="codebox__text-blue">const</span> callOrWhatsApp =
+                <a class="codebox__text-brown" href="tel:+491774244990">'+49-177-424-4990'</a> ||
+                <a class="codebox__text-brown" href="tel:+79138818625">'+7-913-881-8625'</a> ;
+              </p>
+              <p class="codebox__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="codebox__text-blue">const</span> useSocials = {
+              </p>
+              <p class="codebox__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                telegram: <a class="codebox__text-brown" href="https://t.me/Antreesy" target="_blank">'@Antreesy'</a> ,
+              </p>
+              <p class="codebox__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                vk.com: <a class="codebox__text-brown" href="https://vk.com/antreesy" target="_blank">'/antreesy'</a> ,
+              </p>
+              <p class="codebox__text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};
+              </p>
+              <p class="codebox__text">
+                <span class="codebox__text-white">};</span>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./src/scripts/pagescroll.js"></script>
+  <script src="./src/scripts/index.js"></script>
+
+</body>
+</html>

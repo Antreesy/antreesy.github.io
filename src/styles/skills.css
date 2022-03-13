@@ -1,0 +1,46 @@
+.section#skills {
+    background: #e2ebff;
+  }
+
+  .skillbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skillbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.skillbox__caption {
+    color: #000;
+  }
+  
+  .skillbox__list {
+    align-self: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill__img {
+    height: 60px;
+  }
+  .skill__caption {
+    font-weight: 700;
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    .skillbox__list {
+      width: 80%;
+    }
+  }
