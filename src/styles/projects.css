@@ -18,15 +18,15 @@
 }
 
 .card-img-top {
-  max-height: 60%;
+  max-height: 55%;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .card-title {
   text-align: center;
@@ -38,5 +38,29 @@
 }
 
 @media (max-width: 768px) {
+  .projects-caption {
+    display: none;
+  }
+  .projects-content {
+    flex-direction: column;
+    height: 100%;
+  }
+  .card {
+    flex-direction: row;
+  }
+  .card-img-top {
+    max-width: 50%;
+    max-height: 100%;
+    object-position: left;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
+  .card-text {
+    display: none;
+  }
 }
