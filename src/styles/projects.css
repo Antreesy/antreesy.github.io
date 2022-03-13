@@ -48,19 +48,25 @@
   .card {
     flex-direction: row;
   }
+
+  .swiper{
+    height: 40vh;
+
+  }
   .card-img-top {
-    max-width: 50%;
+    max-width: 100%;
     max-height: 100%;
-    object-position: left;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.3;
+    filter: blur(1px);
   }
   
   .card-body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
-  }
-
-  .card-text {
-    display: none;
+    z-index: 1;
   }
 }

@@ -18,15 +18,24 @@
       });
 
       // eslint-disable-next-line no-undef
-      new PageScroll('#pagescroll', {
-        animDuration: 500,
-        easing: 'ease-in-out', 
-        controlColor: 'rgba(0,0,0,0)', 
-        nav: [
-          document.getElementById('hero-link'), 
-          document.getElementById('skills-link'), 
-          document.getElementById('projects-link'), 
-          document.getElementById('contacts-link'), 
-      ]
-    })
+    // new PageScroll('#pagescroll', {
+    //   animDuration: 500,
+    //   easing: 'ease-in-out', 
+    //   controlColor: 'rgba(0,0,0,0)', 
+    //   nav: [
+    //     document.getElementById('hero-link'), 
+    //     document.getElementById('skills-link'), 
+    //     document.getElementById('projects-link'), 
+    //     document.getElementById('contacts-link'), 
+    //   ]
+    // })
+
+    // eslint-disable-next-line no-undef
+    new fullpage('#fullpage', {
+      //options here
+      autoScrolling:true,
+      scrollHorizontally: true,
+      paddingTop: '60px'
+    });
+
 })()

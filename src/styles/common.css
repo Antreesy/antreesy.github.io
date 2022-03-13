@@ -76,6 +76,6 @@ body {
 
   @media (max-width: 768px) {
     :root {
-      --codebox-font-size: 16px;
+      --codebox-font-size: 12px;
     }
   }
