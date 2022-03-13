@@ -19,7 +19,7 @@
 
       // eslint-disable-next-line no-undef
       new PageScroll('#pagescroll', {
-        animDuration: 100,
+        animDuration: 500,
         easing: 'ease-in-out', 
         controlColor: 'rgba(0,0,0,0)', 
         nav: [
