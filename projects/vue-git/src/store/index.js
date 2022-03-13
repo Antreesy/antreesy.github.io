@@ -30,11 +30,11 @@ export const store = createStore({
       ],
       table: {
         tableKeys: [
-          { id: 1, name: "Индекс", value: "postal_code" },
-          { id: 2, name: "Город", value: "city" },
-          { id: 3, name: "Улица", value: "street" },
-          { id: 4, name: "Дом", value: "house" },
-          { id: 5, name: "Квартира", value: "flat" },
+          { id: 1, name: "Postal code", value: "postal_code" },
+          { id: 2, name: "City", value: "city" },
+          { id: 3, name: "Street", value: "street" },
+          { id: 4, name: "House", value: "house" },
+          { id: 5, name: "Flat", value: "flat" },
         ],
         tableData: [
           {
@@ -62,8 +62,8 @@ export const store = createStore({
           {
             data: {
               postal_code: "634034",
-              city: "Томск",
-              street: "Советская",
+              city: "Tomsk",
+              street: "Sovetskaya",
               house: "76",
               flat: "-",
             },

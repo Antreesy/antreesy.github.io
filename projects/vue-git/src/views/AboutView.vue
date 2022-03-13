@@ -17,30 +17,22 @@ const libraries = computed(() => store.getters.LIBRARIES);
       <div class="wrapper__hints">
         <button class="hints-button input-hint">
           ?
-          <p class="hint-tooltip">Принимает любую часть адреса от региона до квартиры. Отправляет запрос при нажатии Enter</p>
+          <p class="hint-tooltip">Accepts any part of the address from the region to the apartment. Sends a request when Enter is pressed</p>
         </button>
         <button class="hints-button button-hint">
           ?
-          <p class="hint-tooltip">Отправляет запрос при клике мыши</p>
+          <p class="hint-tooltip">Sends a request on mouse click</p>
 </button>
       </div>
     </div>
     <div class="about-libraries">
       <p class="about-descr">
-        После заполнения строки поиска и инициирования события Submit (нажатие
-        "Enter" или клик по кнопке Search) компонент SearchBar запускает метод
-        searchFromInput(), который принимает из Vuex-хранилища url сервера и
-        token для авторизации, а из заполненного поля - строковое значение.
-        Затем метод инициирует через fetch POST-запрос на указанный сервер, и в
-        случае успешного получения ответа сохраняет данные в Vuex-хранилище.
+        After filling in the search bar and triggering the Submit event (clicking "Enter" or clicking on the Search button) the SearchBar component runs the method searchFromInput() , which takes the server url from the Vuex store and token for authorization, and from the filled field - a string value. The method then initiates via fetch a POST request to the specified server, and in if the response is successful, saves the data to the Vuex store.
       </p>
       <p class="about-descr">
-        Элемент Table реактивно обновляется и при изменении объекта в хранилище
-        транслирует его содержимое в требуемом виде. Настройка отображаемых
-        колонок также хранится в сторе, передается через props и при
-        необходимости может быть модифицирована под конкретную таблицу.
+        The Table element is reactively updated and when the object changes in the storage, it translates its contents in the required form. The setting of the displayed columns is also stored in the store, passed through props and, if necessary, can be modified for a specific table.
       </p>
-      <h2 class="about__caption">Использованные библиотеки:</h2>
+      <h2 class="about__caption">Used Libraries:</h2>
       <ul class="about__list">
         <li class="library__item" v-for="item in libraries" :key="item.id">
           <div class="library__card">

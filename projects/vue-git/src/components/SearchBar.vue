@@ -19,7 +19,11 @@ export default {
           Accept: "application/json",
           Authorization: "Token " + token,
         },
-        body: JSON.stringify({ query: this.inputValue, count: 20 }),
+        body: JSON.stringify({
+          query: this.inputValue,
+          count: 20,
+          language: "en",
+        }),
       };
 
       fetch(url, options)
@@ -40,7 +44,7 @@ export default {
       class="searchInput"
       v-on:keyup.enter="searchFromInput"
       v-model="inputValue"
-      placeholder="Введите адрес"
+      placeholder="Enter address"
     />
     <button class="searchButton" v-on:click="searchFromInput">Search</button>
   </div>
