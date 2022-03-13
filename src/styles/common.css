@@ -59,6 +59,10 @@ body {
   width: 90%;
   align-self: center;
 }
+.btn-warning {
+  width: 90%;
+  align-self: center;
+}
 
 .main {
   background: #1C1E22;
