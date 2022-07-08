@@ -24,7 +24,7 @@ a {
 }
 
 body {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 400;
   background: #fff;
   font-size: 35px;
@@ -35,36 +35,33 @@ img {
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
-    url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-ExtraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -237,7 +234,7 @@ img {
   outline-width: 0;
 }
 
-.nav-toggle [class*="bar-"] {
+.nav-toggle [class*='bar-'] {
   background: #333;
   display: block;
   -webkit-transform: rotate(0deg);
@@ -267,8 +264,7 @@ img {
   opacity: 0;
 }
 .opened .bar-bot {
-  -webkit-transform: rotate(-45deg) translateX(15%) translateY(-300%)
-    scaleX(110%);
+  -webkit-transform: rotate(-45deg) translateX(15%) translateY(-300%) scaleX(110%);
   -ms-transform: rotate(-45deg) translateX(15%) translateY(-300%) scaleX(110%);
   transform: rotate(-45deg) translateX(15%) translateY(-300%) scaleX(110%);
   -webkit-transform-origin: 50% 50%;
@@ -425,7 +421,7 @@ img {
 .search {
   width: 24px;
   height: 24px;
-  background-image: url("../img/search.svg");
+  background-image: url('../img/search.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -455,21 +451,10 @@ img {
   height: 100%;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.swiper-slide_1 {
-  background-image: url("../img/slider1.jpg");
-}
-
-.swiper-slide_2 {
-  background-image: url("../img/slider2.jpg");
-}
-
-.swiper-slide_3 {
-  background-image: url("../img/slider3.jpg");
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper-section__content {
@@ -545,7 +530,6 @@ img {
   -ms-flex-positive: 0;
   flex-grow: 0;
   padding-top: 425px;
-  background-image: url("../img/about.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -626,11 +610,11 @@ img {
 }
 
 .feature_bg-1 {
-  background-image: url("../img/about-icon1.svg");
+  background-image: url('../img/about-icon1.svg');
 }
 
 .feature_bg-2 {
-  background-image: url("../img/about-icon2.svg");
+  background-image: url('../img/about-icon2.svg');
 }
 
 /* HOW WE WORK CLASSES */
@@ -721,22 +705,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.slider__bg-1 {
-  background-image: url("../img/work1.jpg");
-}
-
-.slider__bg-2 {
-  background-image: url("../img/work2.jpg");
-}
-
-.slider__bg-3 {
-  background-image: url("../img/work3.jpg");
-}
-
-.slider__bg-4 {
-  background-image: url("../img/work4.jpg");
 }
 
 .slider__heading {
@@ -852,29 +820,26 @@ img {
 
 .faq-section__container .faq-section__caption.ui-accordion-header-active:hover,
 .faq-section__container .faq-section__caption.ui-accordion-header-active:focus,
-.faq-section__container
-  .faq-section__caption.ui-accordion-header-active:focus-visible {
+.faq-section__container .faq-section__caption.ui-accordion-header-active:focus-visible {
   border-bottom-color: transparent;
 }
 
 .faq-section__container .faq-section__caption:hover + .faq-section__text,
 .faq-section__container .faq-section__caption:focus + .faq-section__text,
-.faq-section__container
-  .faq-section__caption:focus-visible
-  + .faq-section__text {
+.faq-section__container .faq-section__caption:focus-visible + .faq-section__text {
   z-index: 1;
   border-bottom-color: #ff9900;
   border-bottom-color: var(--orange);
 }
 
 .faq-section__container .faq-section__caption::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 28px;
   right: 0;
   width: 50px;
   height: 50px;
-  background-image: url("../img/х.svg");
+  background-image: url('../img/х.svg');
   background-size: contain;
   -webkit-transition: background-image, -webkit-transform 0.4s ease;
   transition: background-image, -webkit-transform 0.4s ease;
@@ -884,15 +849,15 @@ img {
 }
 
 .faq-section__container .faq-section__caption:hover::after {
-  background-image: url("../img/хhover.svg");
+  background-image: url('../img/хhover.svg');
 }
 
 .faq-section__container .faq-section__caption:focus::after {
-  background-image: url("../img/хhover.svg");
+  background-image: url('../img/хhover.svg');
 }
 
 .ui-accordion .ui-accordion-header-active::after {
-  background-image: url("../img/х.svg");
+  background-image: url('../img/х.svg');
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -1055,7 +1020,7 @@ img {
   background-color: #666;
 }
 
-textarea[class="form__input"] {
+textarea[class='form__input'] {
   height: 150px;
   margin-bottom: 23px;
   resize: none;
@@ -1131,7 +1096,7 @@ textarea[class="form__input"] {
   position: absolute;
   top: 14px;
   left: 0px;
-  content: "";
+  content: '';
   width: 14px;
   height: 14px;
   border: 1px solid #cacaca;
@@ -1144,7 +1109,7 @@ textarea[class="form__input"] {
 }
 
 .checkbox:checked + .custom-checkbox::before {
-  background: url("../img/Check.svg");
+  background: url('../img/Check.svg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 12px 12px;
@@ -1355,7 +1320,7 @@ textarea[class="form__input"] {
     padding-right: 7px;
   }
 
-  textarea[class="form__input"] {
+  textarea[class='form__input'] {
     margin-bottom: 25px;
   }
 
@@ -1491,7 +1456,7 @@ textarea[class="form__input"] {
     max-width: 542px;
   }
 
-  textarea[class="form__input"] {
+  textarea[class='form__input'] {
     margin-bottom: 24px;
   }
 
@@ -1574,11 +1539,11 @@ textarea[class="form__input"] {
   }
 
   .feature_bg-1 {
-    background-image: url("../img/about-icon1s.svg");
+    background-image: url('../img/about-icon1s.svg');
   }
 
   .feature_bg-2 {
-    background-image: url("../img/about-icon2s.svg");
+    background-image: url('../img/about-icon2s.svg');
   }
 
   .slider__btn-wrapper {
@@ -1890,7 +1855,7 @@ textarea[class="form__input"] {
     padding-top: 17px;
   }
 
-  textarea[class="form__input"] {
+  textarea[class='form__input'] {
     padding-top: 14px;
     margin-bottom: 18px;
   }
