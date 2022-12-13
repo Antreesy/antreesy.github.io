@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hi! It's my portfolio</title>
+  <title>Maksim Sukharev | Front-end developer</title>
   <link rel="stylesheet" href="./src/styles/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
@@ -31,11 +31,6 @@
             </li>
           </ul>
         </nav>
-
-        <div class="lang-wrapper">
-          <a class="link lang-wrapper__link is-active" href="./index.html">EN</a>
-          <a class="link lang-wrapper__link" href="./index-ru.html">RU</a>
-        </div>
       </div>
     </div>
   </header>
@@ -60,7 +55,7 @@
               </p>
               <p class="codebox__text">
                 &nbsp;&nbsp;&nbsp;&nbsp;myRepository: url(
-                <a class="codebox__text-brown" href="https://github.com/Antreesy/antreesy.github.io/tree/main/projects" target="_blank">'antreesy.github.io/projects'</a>),
+                <a class="codebox__text-brown" href="https://github.com/Antreesy" target="_blank">'github.com/Antreesy'</a>),
               </p>
               <p class="codebox__text mb-3" >
                 <span class="codebox__text-white">};</span>
@@ -73,16 +68,17 @@
                 <span class="codebox__text-white">{</span>
               </p>
               <p class="codebox__text">
-                &nbsp;&nbsp;&nbsp;&nbsp;webLanguages: [
-                <span class="codebox__text-brown">'HTML'</span>, 
-                <span class="codebox__text-brown">'CSS3'</span>, 
-                <span class="codebox__text-brown">'Javascript'</span>],
+                &nbsp;&nbsp;&nbsp;&nbsp;commonTools: [
+                <span class="codebox__text-brown">'Javascript'</span>,
+                <span class="codebox__text-brown">'React.js'</span>,
+                <span class="codebox__text-brown">'Node.js'</span>],
               </p>
               <p class="codebox__text">
-                &nbsp;&nbsp;&nbsp;&nbsp;javascriptTools: [
+                &nbsp;&nbsp;&nbsp;&nbsp;supportTools: [
                 <span class="codebox__text-brown">'Typescript'</span>, 
-                <span class="codebox__text-brown">'React.js'</span>, 
-                <span class="codebox__text-brown">'Material UI'</span>],
+                <span class="codebox__text-brown">'Next.js'</span>, 
+                <span class="codebox__text-brown">'Material UI'</span>
+                ],
               </p>
               <p class="codebox__text">
                 <span class="codebox__text-white">};</span>
@@ -91,9 +87,9 @@
           </div>
 
           <div class="greeting">
-            <h1 class="h1 greeting__caption">Welcome to my workspace!</h1>
+            <h1 class="h1 greeting__caption">Welcome to my portfolio!</h1>
             <h1 class="h2 greeting__caption">I am Maksim,</h1>
-            <h1 class="h2 greeting__caption">Frontend-developer</h1>
+            <h1 class="h2 greeting__caption">Front-end developer</h1>
           </div>
 
         </div>
@@ -124,8 +120,50 @@
               </li>
               <li class="skillbox__item col-4 mb-4">
                   <div class="skill">
+                  <img src="./src/img/skill-icons/ts.svg" alt="ts" class="skill__img">
+                  <span class="skill__caption">TYPESCRIPT</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/react.svg" alt="react" class="skill__img">
+                  <span class="skill__caption">REACT . JS</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                <div class="skill">
+                  <img src="./src/img/skill-icons/sass.svg" alt="sass" class="skill__img">
+                  <span class="skill__caption">SASS</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="skillbox skillbox-second">
+            <h2 class="h2 offset-md-2 mb-4 skillbox__caption">Familiar with:</h2>
+            <ul class="list skillbox__list">
+
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
+                  <img src="./src/img/skill-icons/vue.svg" alt="vue" class="skill__img">
+                  <span class="skill__caption">VUE . JS</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                  <div class="skill">
                   <img src="./src/img/skill-icons/bootstrap.svg" alt="bootstrap" class="skill__img">
                   <span class="skill__caption">BOOTSTRAP</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                <div class="skill">
+                  <img src="./src/img/skill-icons/material-ui.svg" alt="material-ui" class="skill__img">
+                  <span class="skill__caption">MATERIAL UI</span>
+                </div>
+              </li>
+              <li class="skillbox__item col-4 mb-4">
+                <div class="skill">
+                  <img src="./src/img/skill-icons/gulp.svg" alt="gulp" class="skill__img">
+                  <span class="skill__caption">GULP</span>
                 </div>
               </li>
               <li class="skillbox__item col-4 mb-4">
@@ -142,47 +180,6 @@
               </li>
             </ul>
           </div>
-          <div class="skillbox skillbox-second">
-            <h2 class="h2 offset-md-2 mb-4 skillbox__caption">Learning now:</h2>
-            <ul class="list skillbox__list">
-              <li class="skillbox__item col-4 mb-4">
-                  <div class="skill">
-                  <img src="./src/img/skill-icons/ts.svg" alt="ts" class="skill__img">
-                  <span class="skill__caption">TYPESCRIPT</span>
-                </div>
-              </li>
-              <li class="skillbox__item col-4 mb-4">
-                  <div class="skill">
-                  <img src="./src/img/skill-icons/react.svg" alt="react" class="skill__img">
-                  <span class="skill__caption">REACT . JS</span>
-                </div>
-              </li>
-              <li class="skillbox__item col-4 mb-4">
-                <div class="skill">
-                  <img src="./src/img/skill-icons/material-ui.svg" alt="material-ui" class="skill__img">
-                  <span class="skill__caption">MATERIAL UI</span>
-                </div>
-              </li>
-              <li class="skillbox__item col-4 mb-4">
-                  <div class="skill">
-                  <img src="./src/img/skill-icons/vue.svg" alt="vue" class="skill__img">
-                  <span class="skill__caption">VUE . JS</span>
-                </div>
-              </li>
-              <li class="skillbox__item col-4 mb-4">
-                <div class="skill">
-                  <img src="./src/img/skill-icons/gulp.svg" alt="gulp" class="skill__img">
-                  <span class="skill__caption">GULP</span>
-                </div>
-              </li>
-              <li class="skillbox__item col-4 mb-4">
-                <div class="skill">
-                  <img src="./src/img/skill-icons/sass.svg" alt="sass" class="skill__img">
-                  <span class="skill__caption">SASS</span>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
 
@@ -195,30 +192,10 @@
                 <!-- Slides -->
                 <div class="swiper-slide">
                   <div class="card">
-                    <img src="./src/img/lagoona-preview.jpg" class="card-img-top">
-                    <div class="card-body">
-                      <h5 class="card-title">"Lagoona"</h5>
-                      <p class="card-text">Hotel service landing page. UI-design, stylization of forms</p>
-                      <a href="./projects/Lagoona/index-en.html" target="_blank" class="btn btn-primary">Go to project</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card">
                     <img src="./src/img/euclid-preview.jpg" class="card-img-top">
                     <div class="card-body">
                       <h5 class="card-title">"Euclid"</h5>
                       <p class="card-text">Design agency landing page. Interactive menu, tabs, accordion</p>
-                      <a href="./projects/Euclid/index-en.html" target="_blank" class="btn btn-primary">Go to project</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img src="./src/img/euclid-preview.jpg" class="card-img-top">
-                    <div class="card-body">
-                      <h5 class="card-title">"Euclid" 2.0</h5>
-                      <p class="card-text">Optimised version</p>
                       <a href="./projects/Euclid-opt/index-en.html" target="_blank" class="btn btn-primary">Go to project</a>
                     </div>
                   </div>
@@ -233,7 +210,17 @@
                     </div>
                   </div>
                 </div>
-    
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="./src/img/ilonsi-preview.jpg" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">Online-shop</h5>
+                      <p class="card-text">Built with React + Typescript, Next.js</p>
+                      <a href="https://online-shop-antreesy.vercel.app/landing-page" target="_blank" class="btn btn-primary">Go to project</a>
+                      <a href="https://github.com/Antreesy/online-shop" target="_blank" class="btn btn-warning">Open a repo</a>
+                    </div>
+                  </div>
+                </div>
               </div>
     
               <div class="swiper-pagination"></div>
@@ -274,7 +261,17 @@
                     </div>
                   </div>
                 </div>
-    
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Other projects</h5>
+                      <p class="card-text">Custom Multi-Select</p>
+                      <a href="https://github.com/Antreesy/multi-select" target="_blank" class="btn btn-warning">Open a repo</a>
+                      <p class="card-text">Authorisation form</p>
+                      <a href="https://github.com/Antreesy/auth-form" target="_blank" class="btn btn-warning">Open a repo</a>
+                    </div>
+                  </div>
+                </div>
               </div>
     
               <div class="swiper-pagination"></div>
